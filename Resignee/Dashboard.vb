@@ -4,10 +4,10 @@ Public Class Dashboard
     Dim sql As String
     Dim app As New ApprovalDB
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        getInfo()
+
     End Sub
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        getInfo()
+
     End Sub
 
     Sub getInfo()
@@ -29,7 +29,7 @@ Public Class Dashboard
         sql = "select BDGDeptStatus from  historyrequest where empID='" & Login.TextBox1.Text & "'"
         DataLabel(Me.LabelBDGStatus, sql)
         sql = "select SDGDeptStatus from  historyrequest where empID='" & Login.TextBox1.Text & "'"
-        DataLabel(Me.LabelSDGStatus, sql)
+        DataLabel(Me.LabelSDGSuperStatus, sql)
         sql = "select ITOPSDeptStatus from  historyrequest where empID='" & Login.TextBox1.Text & "'"
         DataLabel(Me.LabelITOPSStatus, sql)
         sql = "select PMGDeptStatus from  historyrequest where empID='" & Login.TextBox1.Text & "'"
@@ -42,7 +42,7 @@ Public Class Dashboard
         sql = "select BDGDeptDate from  historyrequest where empID='" & Login.TextBox1.Text & "'"
         DateLabel(Me.LabelBDGDate, sql)
         sql = "select SDGDeptDate from  historyrequest where empID='" & Login.TextBox1.Text & "'"
-        DateLabel(Me.LabelSDGDate, sql)
+        DateLabel(Me.LabelSDGSuperDate, sql)
         sql = "select ITOPSDeptDate from  historyrequest where empID='" & Login.TextBox1.Text & "'"
         DateLabel(Me.LabelITOPSDate, sql)
         sql = "select PMGDeptDate from  historyrequest where empID='" & Login.TextBox1.Text & "'"
@@ -70,13 +70,13 @@ Public Class Dashboard
         End If
     End Sub
 
-    Private Sub LabelSDGStatus_TextChanged(sender As Object, e As EventArgs) Handles LabelSDGStatus.TextChanged
-        If LabelSDGStatus.Text = "Pending" Then
-            LabelSDGStatus.BackColor = Color.PowderBlue
-        ElseIf LabelSDGStatus.Text = "Approve" Then
-            LabelSDGStatus.BackColor = Color.Lime
+    Private Sub LabelSDGStatus_TextChanged(sender As Object, e As EventArgs) Handles LabelSDGSuperStatus.TextChanged
+        If LabelSDGSuperStatus.Text = "Pending" Then
+            LabelSDGSuperStatus.BackColor = Color.PowderBlue
+        ElseIf LabelSDGSuperStatus.Text = "Approve" Then
+            LabelSDGSuperStatus.BackColor = Color.Lime
         Else
-            LabelSDGStatus.BackColor = Color.Firebrick
+            LabelSDGSuperStatus.BackColor = Color.Firebrick
 
         End If
     End Sub
