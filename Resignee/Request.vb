@@ -414,6 +414,7 @@ Public Class Request
             Case Keys.Space
             Case Keys.A To Keys.Z
             Case Keys.Left, Keys.Right, Keys.Back
+
             Case Else : e.SuppressKeyPress = True
 
 
