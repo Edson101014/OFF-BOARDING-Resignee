@@ -147,6 +147,21 @@ Partial Class Dashboard
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ButtonRefresh = New System.Windows.Forms.Button()
         Me.ButtonLogOut = New System.Windows.Forms.Button()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -155,7 +170,7 @@ Partial Class Dashboard
         '
         Me.LabelFinalDate.AutoSize = True
         Me.LabelFinalDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinalDate.Location = New System.Drawing.Point(826, 1061)
+        Me.LabelFinalDate.Location = New System.Drawing.Point(818, 1630)
         Me.LabelFinalDate.Name = "LabelFinalDate"
         Me.LabelFinalDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelFinalDate.TabIndex = 536
@@ -163,11 +178,11 @@ Partial Class Dashboard
         '
         'Label18
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(604, 1059)
+        Me.Label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(559, 1629)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(41, 18)
+        Me.Label18.Size = New System.Drawing.Size(185, 43)
         Me.Label18.TabIndex = 535
         Me.Label18.Text = "none"
         '
@@ -175,7 +190,7 @@ Partial Class Dashboard
         '
         Me.LabelFinalStatus.AutoSize = True
         Me.LabelFinalStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinalStatus.Location = New System.Drawing.Point(426, 1059)
+        Me.LabelFinalStatus.Location = New System.Drawing.Point(426, 1628)
         Me.LabelFinalStatus.Name = "LabelFinalStatus"
         Me.LabelFinalStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelFinalStatus.TabIndex = 534
@@ -185,17 +200,16 @@ Partial Class Dashboard
         '
         Me.LabelFinalName.AutoSize = True
         Me.LabelFinalName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinalName.Location = New System.Drawing.Point(145, 1061)
+        Me.LabelFinalName.Location = New System.Drawing.Point(153, 1630)
         Me.LabelFinalName.Name = "LabelFinalName"
-        Me.LabelFinalName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelFinalName.Size = New System.Drawing.Size(0, 16)
         Me.LabelFinalName.TabIndex = 533
-        Me.LabelFinalName.Text = "LabelName"
         Me.LabelFinalName.Visible = False
         '
         'Label22
         '
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(12, 1061)
+        Me.Label22.Location = New System.Drawing.Point(10, 1630)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(104, 32)
         Me.Label22.TabIndex = 532
@@ -208,7 +222,7 @@ Partial Class Dashboard
         Me.CheckBoxFinal.Enabled = False
         Me.CheckBoxFinal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxFinal.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.CheckBoxFinal.Location = New System.Drawing.Point(516, 1106)
+        Me.CheckBoxFinal.Location = New System.Drawing.Point(519, 1709)
         Me.CheckBoxFinal.Name = "CheckBoxFinal"
         Me.CheckBoxFinal.Size = New System.Drawing.Size(129, 24)
         Me.CheckBoxFinal.TabIndex = 531
@@ -222,7 +236,7 @@ Partial Class Dashboard
         Me.CheckBoxInterview.Enabled = False
         Me.CheckBoxInterview.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxInterview.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.CheckBoxInterview.Location = New System.Drawing.Point(249, 1106)
+        Me.CheckBoxInterview.Location = New System.Drawing.Point(252, 1709)
         Me.CheckBoxInterview.Name = "CheckBoxInterview"
         Me.CheckBoxInterview.Size = New System.Drawing.Size(171, 24)
         Me.CheckBoxInterview.TabIndex = 530
@@ -233,7 +247,7 @@ Partial Class Dashboard
         '
         Me.LabelHRInterviewDate.AutoSize = True
         Me.LabelHRInterviewDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRInterviewDate.Location = New System.Drawing.Point(826, 1022)
+        Me.LabelHRInterviewDate.Location = New System.Drawing.Point(818, 1550)
         Me.LabelHRInterviewDate.Name = "LabelHRInterviewDate"
         Me.LabelHRInterviewDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelHRInterviewDate.TabIndex = 529
@@ -241,11 +255,11 @@ Partial Class Dashboard
         '
         'LabelHRInterviewComment
         '
-        Me.LabelHRInterviewComment.AutoSize = True
-        Me.LabelHRInterviewComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRInterviewComment.Location = New System.Drawing.Point(604, 1020)
+        Me.LabelHRInterviewComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelHRInterviewComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelHRInterviewComment.Location = New System.Drawing.Point(559, 1549)
         Me.LabelHRInterviewComment.Name = "LabelHRInterviewComment"
-        Me.LabelHRInterviewComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelHRInterviewComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelHRInterviewComment.TabIndex = 528
         Me.LabelHRInterviewComment.Text = "none"
         '
@@ -253,7 +267,7 @@ Partial Class Dashboard
         '
         Me.LabelHRInterviewStatus.AutoSize = True
         Me.LabelHRInterviewStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRInterviewStatus.Location = New System.Drawing.Point(426, 1020)
+        Me.LabelHRInterviewStatus.Location = New System.Drawing.Point(426, 1548)
         Me.LabelHRInterviewStatus.Name = "LabelHRInterviewStatus"
         Me.LabelHRInterviewStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelHRInterviewStatus.TabIndex = 527
@@ -263,17 +277,15 @@ Partial Class Dashboard
         '
         Me.LabelHRInterviewName.AutoSize = True
         Me.LabelHRInterviewName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRInterviewName.Location = New System.Drawing.Point(145, 1022)
+        Me.LabelHRInterviewName.Location = New System.Drawing.Point(153, 1550)
         Me.LabelHRInterviewName.Name = "LabelHRInterviewName"
-        Me.LabelHRInterviewName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelHRInterviewName.Size = New System.Drawing.Size(0, 16)
         Me.LabelHRInterviewName.TabIndex = 526
-        Me.LabelHRInterviewName.Text = "LabelName"
-        Me.LabelHRInterviewName.Visible = False
         '
         'Label213
         '
         Me.Label213.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label213.Location = New System.Drawing.Point(12, 1022)
+        Me.Label213.Location = New System.Drawing.Point(10, 1550)
         Me.Label213.Name = "Label213"
         Me.Label213.Size = New System.Drawing.Size(104, 32)
         Me.Label213.TabIndex = 525
@@ -283,7 +295,7 @@ Partial Class Dashboard
         '
         Me.LabelHRHeadDate.AutoSize = True
         Me.LabelHRHeadDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRHeadDate.Location = New System.Drawing.Point(826, 966)
+        Me.LabelHRHeadDate.Location = New System.Drawing.Point(818, 1474)
         Me.LabelHRHeadDate.Name = "LabelHRHeadDate"
         Me.LabelHRHeadDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelHRHeadDate.TabIndex = 524
@@ -291,11 +303,11 @@ Partial Class Dashboard
         '
         'LabelHRHeadComment
         '
-        Me.LabelHRHeadComment.AutoSize = True
-        Me.LabelHRHeadComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRHeadComment.Location = New System.Drawing.Point(604, 964)
+        Me.LabelHRHeadComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelHRHeadComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelHRHeadComment.Location = New System.Drawing.Point(559, 1465)
         Me.LabelHRHeadComment.Name = "LabelHRHeadComment"
-        Me.LabelHRHeadComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelHRHeadComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelHRHeadComment.TabIndex = 523
         Me.LabelHRHeadComment.Text = "none"
         '
@@ -303,7 +315,7 @@ Partial Class Dashboard
         '
         Me.LabelHRHeadStatus.AutoSize = True
         Me.LabelHRHeadStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRHeadStatus.Location = New System.Drawing.Point(426, 964)
+        Me.LabelHRHeadStatus.Location = New System.Drawing.Point(426, 1474)
         Me.LabelHRHeadStatus.Name = "LabelHRHeadStatus"
         Me.LabelHRHeadStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelHRHeadStatus.TabIndex = 522
@@ -313,17 +325,15 @@ Partial Class Dashboard
         '
         Me.LabelHRHeadName.AutoSize = True
         Me.LabelHRHeadName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRHeadName.Location = New System.Drawing.Point(145, 966)
+        Me.LabelHRHeadName.Location = New System.Drawing.Point(153, 1474)
         Me.LabelHRHeadName.Name = "LabelHRHeadName"
-        Me.LabelHRHeadName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelHRHeadName.Size = New System.Drawing.Size(0, 16)
         Me.LabelHRHeadName.TabIndex = 521
-        Me.LabelHRHeadName.Text = "LabelName"
-        Me.LabelHRHeadName.Visible = False
         '
         'Label32
         '
         Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(12, 966)
+        Me.Label32.Location = New System.Drawing.Point(10, 1476)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(104, 32)
         Me.Label32.TabIndex = 520
@@ -337,7 +347,7 @@ Partial Class Dashboard
         Me.CheckBoxFinalPay.Enabled = False
         Me.CheckBoxFinalPay.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxFinalPay.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxFinalPay.Location = New System.Drawing.Point(693, 887)
+        Me.CheckBoxFinalPay.Location = New System.Drawing.Point(661, 1368)
         Me.CheckBoxFinalPay.Name = "CheckBoxFinalPay"
         Me.CheckBoxFinalPay.Size = New System.Drawing.Size(83, 20)
         Me.CheckBoxFinalPay.TabIndex = 519
@@ -352,7 +362,7 @@ Partial Class Dashboard
         Me.CheckBoxCOE.Enabled = False
         Me.CheckBoxCOE.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxCOE.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxCOE.Location = New System.Drawing.Point(563, 887)
+        Me.CheckBoxCOE.Location = New System.Drawing.Point(559, 1368)
         Me.CheckBoxCOE.Name = "CheckBoxCOE"
         Me.CheckBoxCOE.Size = New System.Drawing.Size(55, 20)
         Me.CheckBoxCOE.TabIndex = 518
@@ -367,7 +377,7 @@ Partial Class Dashboard
         Me.CheckBoxITR.Enabled = False
         Me.CheckBoxITR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxITR.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxITR.Location = New System.Drawing.Point(563, 910)
+        Me.CheckBoxITR.Location = New System.Drawing.Point(559, 1406)
         Me.CheckBoxITR.Name = "CheckBoxITR"
         Me.CheckBoxITR.Size = New System.Drawing.Size(49, 20)
         Me.CheckBoxITR.TabIndex = 517
@@ -382,7 +392,7 @@ Partial Class Dashboard
         Me.CheckBoxCompanyID.Enabled = False
         Me.CheckBoxCompanyID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxCompanyID.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxCompanyID.Location = New System.Drawing.Point(372, 887)
+        Me.CheckBoxCompanyID.Location = New System.Drawing.Point(372, 1368)
         Me.CheckBoxCompanyID.Name = "CheckBoxCompanyID"
         Me.CheckBoxCompanyID.Size = New System.Drawing.Size(101, 20)
         Me.CheckBoxCompanyID.TabIndex = 516
@@ -397,7 +407,7 @@ Partial Class Dashboard
         Me.CheckBoxQuitClaim.Enabled = False
         Me.CheckBoxQuitClaim.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxQuitClaim.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxQuitClaim.Location = New System.Drawing.Point(372, 913)
+        Me.CheckBoxQuitClaim.Location = New System.Drawing.Point(372, 1406)
         Me.CheckBoxQuitClaim.Name = "CheckBoxQuitClaim"
         Me.CheckBoxQuitClaim.Size = New System.Drawing.Size(87, 20)
         Me.CheckBoxQuitClaim.TabIndex = 515
@@ -412,7 +422,7 @@ Partial Class Dashboard
         Me.CheckBoxHMO.Enabled = False
         Me.CheckBoxHMO.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxHMO.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxHMO.Location = New System.Drawing.Point(81, 887)
+        Me.CheckBoxHMO.Location = New System.Drawing.Point(81, 1368)
         Me.CheckBoxHMO.Name = "CheckBoxHMO"
         Me.CheckBoxHMO.Size = New System.Drawing.Size(150, 20)
         Me.CheckBoxHMO.TabIndex = 514
@@ -427,7 +437,7 @@ Partial Class Dashboard
         Me.CheckBoxInsurance.Enabled = False
         Me.CheckBoxInsurance.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxInsurance.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxInsurance.Location = New System.Drawing.Point(81, 913)
+        Me.CheckBoxInsurance.Location = New System.Drawing.Point(81, 1406)
         Me.CheckBoxInsurance.Name = "CheckBoxInsurance"
         Me.CheckBoxInsurance.Size = New System.Drawing.Size(177, 20)
         Me.CheckBoxInsurance.TabIndex = 513
@@ -438,7 +448,7 @@ Partial Class Dashboard
         '
         Me.LabelHRGroupDate.AutoSize = True
         Me.LabelHRGroupDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRGroupDate.Location = New System.Drawing.Point(826, 838)
+        Me.LabelHRGroupDate.Location = New System.Drawing.Point(818, 1291)
         Me.LabelHRGroupDate.Name = "LabelHRGroupDate"
         Me.LabelHRGroupDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelHRGroupDate.TabIndex = 479
@@ -446,11 +456,11 @@ Partial Class Dashboard
         '
         'LabelHRGroupComment
         '
-        Me.LabelHRGroupComment.AutoSize = True
-        Me.LabelHRGroupComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRGroupComment.Location = New System.Drawing.Point(604, 838)
+        Me.LabelHRGroupComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelHRGroupComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelHRGroupComment.Location = New System.Drawing.Point(559, 1289)
         Me.LabelHRGroupComment.Name = "LabelHRGroupComment"
-        Me.LabelHRGroupComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelHRGroupComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelHRGroupComment.TabIndex = 478
         Me.LabelHRGroupComment.Text = "none"
         '
@@ -458,7 +468,7 @@ Partial Class Dashboard
         '
         Me.LabelHRGroupStatus.AutoSize = True
         Me.LabelHRGroupStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRGroupStatus.Location = New System.Drawing.Point(426, 838)
+        Me.LabelHRGroupStatus.Location = New System.Drawing.Point(426, 1289)
         Me.LabelHRGroupStatus.Name = "LabelHRGroupStatus"
         Me.LabelHRGroupStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelHRGroupStatus.TabIndex = 477
@@ -468,17 +478,15 @@ Partial Class Dashboard
         '
         Me.LabelHRGroupName.AutoSize = True
         Me.LabelHRGroupName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelHRGroupName.Location = New System.Drawing.Point(145, 840)
+        Me.LabelHRGroupName.Location = New System.Drawing.Point(153, 1290)
         Me.LabelHRGroupName.Name = "LabelHRGroupName"
-        Me.LabelHRGroupName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelHRGroupName.Size = New System.Drawing.Size(0, 16)
         Me.LabelHRGroupName.TabIndex = 476
-        Me.LabelHRGroupName.Text = "LabelName"
-        Me.LabelHRGroupName.Visible = False
         '
         'Label222
         '
         Me.Label222.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label222.Location = New System.Drawing.Point(12, 840)
+        Me.Label222.Location = New System.Drawing.Point(10, 1291)
         Me.Label222.Name = "Label222"
         Me.Label222.Size = New System.Drawing.Size(104, 32)
         Me.Label222.TabIndex = 475
@@ -488,7 +496,7 @@ Partial Class Dashboard
         '
         Me.LabelSysAdminHeadDate.AutoSize = True
         Me.LabelSysAdminHeadDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSysAdminHeadDate.Location = New System.Drawing.Point(826, 769)
+        Me.LabelSysAdminHeadDate.Location = New System.Drawing.Point(818, 1206)
         Me.LabelSysAdminHeadDate.Name = "LabelSysAdminHeadDate"
         Me.LabelSysAdminHeadDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelSysAdminHeadDate.TabIndex = 474
@@ -496,11 +504,11 @@ Partial Class Dashboard
         '
         'LabelSysAdminHeadComment
         '
-        Me.LabelSysAdminHeadComment.AutoSize = True
-        Me.LabelSysAdminHeadComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSysAdminHeadComment.Location = New System.Drawing.Point(604, 769)
+        Me.LabelSysAdminHeadComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelSysAdminHeadComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelSysAdminHeadComment.Location = New System.Drawing.Point(559, 1205)
         Me.LabelSysAdminHeadComment.Name = "LabelSysAdminHeadComment"
-        Me.LabelSysAdminHeadComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelSysAdminHeadComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelSysAdminHeadComment.TabIndex = 473
         Me.LabelSysAdminHeadComment.Text = "none"
         '
@@ -508,7 +516,7 @@ Partial Class Dashboard
         '
         Me.LabelSysAdminHeadStatus.AutoSize = True
         Me.LabelSysAdminHeadStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSysAdminHeadStatus.Location = New System.Drawing.Point(426, 769)
+        Me.LabelSysAdminHeadStatus.Location = New System.Drawing.Point(426, 1204)
         Me.LabelSysAdminHeadStatus.Name = "LabelSysAdminHeadStatus"
         Me.LabelSysAdminHeadStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelSysAdminHeadStatus.TabIndex = 472
@@ -518,17 +526,15 @@ Partial Class Dashboard
         '
         Me.LabelSysAdminHeadName.AutoSize = True
         Me.LabelSysAdminHeadName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSysAdminHeadName.Location = New System.Drawing.Point(145, 771)
+        Me.LabelSysAdminHeadName.Location = New System.Drawing.Point(153, 1205)
         Me.LabelSysAdminHeadName.Name = "LabelSysAdminHeadName"
-        Me.LabelSysAdminHeadName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelSysAdminHeadName.Size = New System.Drawing.Size(0, 16)
         Me.LabelSysAdminHeadName.TabIndex = 471
-        Me.LabelSysAdminHeadName.Text = "LabelName"
-        Me.LabelSysAdminHeadName.Visible = False
         '
         'Label30
         '
         Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(12, 771)
+        Me.Label30.Location = New System.Drawing.Point(10, 1206)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(104, 32)
         Me.Label30.TabIndex = 470
@@ -538,7 +544,7 @@ Partial Class Dashboard
         '
         Me.LabelSysAdminDate.AutoSize = True
         Me.LabelSysAdminDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSysAdminDate.Location = New System.Drawing.Point(824, 665)
+        Me.LabelSysAdminDate.Location = New System.Drawing.Point(818, 1079)
         Me.LabelSysAdminDate.Name = "LabelSysAdminDate"
         Me.LabelSysAdminDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelSysAdminDate.TabIndex = 464
@@ -546,11 +552,11 @@ Partial Class Dashboard
         '
         'LabelSysAdminComment
         '
-        Me.LabelSysAdminComment.AutoSize = True
-        Me.LabelSysAdminComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSysAdminComment.Location = New System.Drawing.Point(602, 665)
+        Me.LabelSysAdminComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelSysAdminComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelSysAdminComment.Location = New System.Drawing.Point(559, 1075)
         Me.LabelSysAdminComment.Name = "LabelSysAdminComment"
-        Me.LabelSysAdminComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelSysAdminComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelSysAdminComment.TabIndex = 463
         Me.LabelSysAdminComment.Text = "none"
         '
@@ -558,7 +564,7 @@ Partial Class Dashboard
         '
         Me.LabelSysAdminStatus.AutoSize = True
         Me.LabelSysAdminStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSysAdminStatus.Location = New System.Drawing.Point(424, 667)
+        Me.LabelSysAdminStatus.Location = New System.Drawing.Point(426, 1077)
         Me.LabelSysAdminStatus.Name = "LabelSysAdminStatus"
         Me.LabelSysAdminStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelSysAdminStatus.TabIndex = 462
@@ -568,17 +574,15 @@ Partial Class Dashboard
         '
         Me.LabelSysAdminName.AutoSize = True
         Me.LabelSysAdminName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSysAdminName.Location = New System.Drawing.Point(143, 667)
+        Me.LabelSysAdminName.Location = New System.Drawing.Point(153, 1079)
         Me.LabelSysAdminName.Name = "LabelSysAdminName"
-        Me.LabelSysAdminName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelSysAdminName.Size = New System.Drawing.Size(0, 16)
         Me.LabelSysAdminName.TabIndex = 461
-        Me.LabelSysAdminName.Text = "LabelName"
-        Me.LabelSysAdminName.Visible = False
         '
         'Label23
         '
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(10, 667)
+        Me.Label23.Location = New System.Drawing.Point(10, 1079)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(104, 32)
         Me.Label23.TabIndex = 460
@@ -591,7 +595,7 @@ Partial Class Dashboard
         Me.CheckBoxLaptop.Enabled = False
         Me.CheckBoxLaptop.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxLaptop.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxLaptop.Location = New System.Drawing.Point(85, 721)
+        Me.CheckBoxLaptop.Location = New System.Drawing.Point(76, 1143)
         Me.CheckBoxLaptop.Name = "CheckBoxLaptop"
         Me.CheckBoxLaptop.Size = New System.Drawing.Size(249, 20)
         Me.CheckBoxLaptop.TabIndex = 459
@@ -605,7 +609,7 @@ Partial Class Dashboard
         Me.CheckBoxComputer.Enabled = False
         Me.CheckBoxComputer.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxComputer.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxComputer.Location = New System.Drawing.Point(568, 721)
+        Me.CheckBoxComputer.Location = New System.Drawing.Point(559, 1143)
         Me.CheckBoxComputer.Name = "CheckBoxComputer"
         Me.CheckBoxComputer.Size = New System.Drawing.Size(214, 20)
         Me.CheckBoxComputer.TabIndex = 458
@@ -619,7 +623,7 @@ Partial Class Dashboard
         Me.CheckBoxEmail.Enabled = False
         Me.CheckBoxEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxEmail.Location = New System.Drawing.Point(353, 721)
+        Me.CheckBoxEmail.Location = New System.Drawing.Point(344, 1143)
         Me.CheckBoxEmail.Name = "CheckBoxEmail"
         Me.CheckBoxEmail.Size = New System.Drawing.Size(193, 20)
         Me.CheckBoxEmail.TabIndex = 457
@@ -630,7 +634,7 @@ Partial Class Dashboard
         '
         Me.txtboxOther.BackColor = System.Drawing.SystemColors.Control
         Me.txtboxOther.Enabled = False
-        Me.txtboxOther.Location = New System.Drawing.Point(353, 562)
+        Me.txtboxOther.Location = New System.Drawing.Point(548, 902)
         Me.txtboxOther.Multiline = True
         Me.txtboxOther.Name = "txtboxOther"
         Me.txtboxOther.Size = New System.Drawing.Size(262, 43)
@@ -643,7 +647,7 @@ Partial Class Dashboard
         Me.CheckBoxOthers.Enabled = False
         Me.CheckBoxOthers.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxOthers.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxOthers.Location = New System.Drawing.Point(278, 562)
+        Me.CheckBoxOthers.Location = New System.Drawing.Point(473, 902)
         Me.CheckBoxOthers.Name = "CheckBoxOthers"
         Me.CheckBoxOthers.Size = New System.Drawing.Size(69, 20)
         Me.CheckBoxOthers.TabIndex = 415
@@ -657,7 +661,7 @@ Partial Class Dashboard
         Me.CheckBoxTools.Enabled = False
         Me.CheckBoxTools.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxTools.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxTools.Location = New System.Drawing.Point(234, 518)
+        Me.CheckBoxTools.Location = New System.Drawing.Point(370, 845)
         Me.CheckBoxTools.Name = "CheckBoxTools"
         Me.CheckBoxTools.Size = New System.Drawing.Size(200, 20)
         Me.CheckBoxTools.TabIndex = 414
@@ -671,7 +675,7 @@ Partial Class Dashboard
         Me.CheckBoxPhone.Enabled = False
         Me.CheckBoxPhone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxPhone.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxPhone.Location = New System.Drawing.Point(650, 518)
+        Me.CheckBoxPhone.Location = New System.Drawing.Point(84, 902)
         Me.CheckBoxPhone.Name = "CheckBoxPhone"
         Me.CheckBoxPhone.Size = New System.Drawing.Size(256, 20)
         Me.CheckBoxPhone.TabIndex = 413
@@ -685,7 +689,7 @@ Partial Class Dashboard
         Me.CheckBoxTable.Enabled = False
         Me.CheckBoxTable.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxTable.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxTable.Location = New System.Drawing.Point(451, 518)
+        Me.CheckBoxTable.Location = New System.Drawing.Point(618, 845)
         Me.CheckBoxTable.Name = "CheckBoxTable"
         Me.CheckBoxTable.Size = New System.Drawing.Size(192, 20)
         Me.CheckBoxTable.TabIndex = 412
@@ -699,7 +703,7 @@ Partial Class Dashboard
         Me.CheckBoxTelco.Enabled = False
         Me.CheckBoxTelco.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxTelco.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxTelco.Location = New System.Drawing.Point(17, 516)
+        Me.CheckBoxTelco.Location = New System.Drawing.Point(84, 843)
         Me.CheckBoxTelco.Name = "CheckBoxTelco"
         Me.CheckBoxTelco.Size = New System.Drawing.Size(194, 22)
         Me.CheckBoxTelco.TabIndex = 411
@@ -710,7 +714,7 @@ Partial Class Dashboard
         '
         Me.LabelAdminHeadDate.AutoSize = True
         Me.LabelAdminHeadDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdminHeadDate.Location = New System.Drawing.Point(824, 615)
+        Me.LabelAdminHeadDate.Location = New System.Drawing.Point(818, 993)
         Me.LabelAdminHeadDate.Name = "LabelAdminHeadDate"
         Me.LabelAdminHeadDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelAdminHeadDate.TabIndex = 259
@@ -718,11 +722,11 @@ Partial Class Dashboard
         '
         'LabelAdminHeadComment
         '
-        Me.LabelAdminHeadComment.AutoSize = True
-        Me.LabelAdminHeadComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdminHeadComment.Location = New System.Drawing.Point(602, 615)
+        Me.LabelAdminHeadComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelAdminHeadComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAdminHeadComment.Location = New System.Drawing.Point(559, 992)
         Me.LabelAdminHeadComment.Name = "LabelAdminHeadComment"
-        Me.LabelAdminHeadComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelAdminHeadComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelAdminHeadComment.TabIndex = 258
         Me.LabelAdminHeadComment.Text = "none"
         '
@@ -730,7 +734,7 @@ Partial Class Dashboard
         '
         Me.LabelAdminHeadStatus.AutoSize = True
         Me.LabelAdminHeadStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdminHeadStatus.Location = New System.Drawing.Point(424, 617)
+        Me.LabelAdminHeadStatus.Location = New System.Drawing.Point(426, 991)
         Me.LabelAdminHeadStatus.Name = "LabelAdminHeadStatus"
         Me.LabelAdminHeadStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelAdminHeadStatus.TabIndex = 257
@@ -740,17 +744,15 @@ Partial Class Dashboard
         '
         Me.LabelAdminHeadName.AutoSize = True
         Me.LabelAdminHeadName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdminHeadName.Location = New System.Drawing.Point(143, 617)
+        Me.LabelAdminHeadName.Location = New System.Drawing.Point(153, 993)
         Me.LabelAdminHeadName.Name = "LabelAdminHeadName"
-        Me.LabelAdminHeadName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelAdminHeadName.Size = New System.Drawing.Size(0, 16)
         Me.LabelAdminHeadName.TabIndex = 256
-        Me.LabelAdminHeadName.Text = "LabelName"
-        Me.LabelAdminHeadName.Visible = False
         '
         'Label15
         '
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(10, 617)
+        Me.Label15.Location = New System.Drawing.Point(10, 993)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(104, 32)
         Me.Label15.TabIndex = 255
@@ -760,7 +762,7 @@ Partial Class Dashboard
         '
         Me.LabelAdminDate.AutoSize = True
         Me.LabelAdminDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdminDate.Location = New System.Drawing.Point(824, 479)
+        Me.LabelAdminDate.Location = New System.Drawing.Point(818, 788)
         Me.LabelAdminDate.Name = "LabelAdminDate"
         Me.LabelAdminDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelAdminDate.TabIndex = 254
@@ -768,11 +770,11 @@ Partial Class Dashboard
         '
         'LabelAdminComment
         '
-        Me.LabelAdminComment.AutoSize = True
-        Me.LabelAdminComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdminComment.Location = New System.Drawing.Point(602, 479)
+        Me.LabelAdminComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelAdminComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAdminComment.Location = New System.Drawing.Point(559, 785)
         Me.LabelAdminComment.Name = "LabelAdminComment"
-        Me.LabelAdminComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelAdminComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelAdminComment.TabIndex = 253
         Me.LabelAdminComment.Text = "none"
         '
@@ -780,7 +782,7 @@ Partial Class Dashboard
         '
         Me.LabelAdminStatus.AutoSize = True
         Me.LabelAdminStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdminStatus.Location = New System.Drawing.Point(424, 477)
+        Me.LabelAdminStatus.Location = New System.Drawing.Point(426, 786)
         Me.LabelAdminStatus.Name = "LabelAdminStatus"
         Me.LabelAdminStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelAdminStatus.TabIndex = 252
@@ -790,17 +792,15 @@ Partial Class Dashboard
         '
         Me.LabelAdminName.AutoSize = True
         Me.LabelAdminName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelAdminName.Location = New System.Drawing.Point(143, 481)
+        Me.LabelAdminName.Location = New System.Drawing.Point(153, 786)
         Me.LabelAdminName.Name = "LabelAdminName"
-        Me.LabelAdminName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelAdminName.Size = New System.Drawing.Size(0, 16)
         Me.LabelAdminName.TabIndex = 251
-        Me.LabelAdminName.Text = "LabelName"
-        Me.LabelAdminName.Visible = False
         '
         'Label14
         '
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(10, 481)
+        Me.Label14.Location = New System.Drawing.Point(10, 786)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(104, 32)
         Me.Label14.TabIndex = 250
@@ -810,7 +810,7 @@ Partial Class Dashboard
         '
         Me.LabelSDGDate.AutoSize = True
         Me.LabelSDGDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSDGDate.Location = New System.Drawing.Point(824, 99)
+        Me.LabelSDGDate.Location = New System.Drawing.Point(818, 189)
         Me.LabelSDGDate.Name = "LabelSDGDate"
         Me.LabelSDGDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelSDGDate.TabIndex = 249
@@ -820,7 +820,7 @@ Partial Class Dashboard
         '
         Me.LabelSDGStatus.AutoSize = True
         Me.LabelSDGStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSDGStatus.Location = New System.Drawing.Point(424, 99)
+        Me.LabelSDGStatus.Location = New System.Drawing.Point(424, 185)
         Me.LabelSDGStatus.Name = "LabelSDGStatus"
         Me.LabelSDGStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelSDGStatus.TabIndex = 247
@@ -830,18 +830,16 @@ Partial Class Dashboard
         '
         Me.LabelSDGName.AutoSize = True
         Me.LabelSDGName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSDGName.Location = New System.Drawing.Point(143, 101)
+        Me.LabelSDGName.Location = New System.Drawing.Point(153, 189)
         Me.LabelSDGName.Name = "LabelSDGName"
-        Me.LabelSDGName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelSDGName.Size = New System.Drawing.Size(0, 16)
         Me.LabelSDGName.TabIndex = 246
-        Me.LabelSDGName.Text = "LabelName"
-        Me.LabelSDGName.Visible = False
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(10, 101)
+        Me.Label13.Location = New System.Drawing.Point(10, 189)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(44, 16)
         Me.Label13.TabIndex = 245
@@ -850,7 +848,7 @@ Partial Class Dashboard
         'TextBoxFinanceOther
         '
         Me.TextBoxFinanceOther.Enabled = False
-        Me.TextBoxFinanceOther.Location = New System.Drawing.Point(384, 325)
+        Me.TextBoxFinanceOther.Location = New System.Drawing.Point(401, 578)
         Me.TextBoxFinanceOther.Multiline = True
         Me.TextBoxFinanceOther.Name = "TextBoxFinanceOther"
         Me.TextBoxFinanceOther.Size = New System.Drawing.Size(228, 73)
@@ -860,7 +858,7 @@ Partial Class Dashboard
         '
         Me.LabelFinanceHeadDate.AutoSize = True
         Me.LabelFinanceHeadDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinanceHeadDate.Location = New System.Drawing.Point(824, 416)
+        Me.LabelFinanceHeadDate.Location = New System.Drawing.Point(818, 702)
         Me.LabelFinanceHeadDate.Name = "LabelFinanceHeadDate"
         Me.LabelFinanceHeadDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelFinanceHeadDate.TabIndex = 243
@@ -868,11 +866,11 @@ Partial Class Dashboard
         '
         'LabelFinanceHeadComment
         '
-        Me.LabelFinanceHeadComment.AutoSize = True
-        Me.LabelFinanceHeadComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinanceHeadComment.Location = New System.Drawing.Point(602, 416)
+        Me.LabelFinanceHeadComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelFinanceHeadComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFinanceHeadComment.Location = New System.Drawing.Point(559, 701)
         Me.LabelFinanceHeadComment.Name = "LabelFinanceHeadComment"
-        Me.LabelFinanceHeadComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelFinanceHeadComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelFinanceHeadComment.TabIndex = 242
         Me.LabelFinanceHeadComment.Text = "none"
         '
@@ -880,7 +878,7 @@ Partial Class Dashboard
         '
         Me.LabelFinanceHeadStatus.AutoSize = True
         Me.LabelFinanceHeadStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinanceHeadStatus.Location = New System.Drawing.Point(424, 416)
+        Me.LabelFinanceHeadStatus.Location = New System.Drawing.Point(426, 700)
         Me.LabelFinanceHeadStatus.Name = "LabelFinanceHeadStatus"
         Me.LabelFinanceHeadStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelFinanceHeadStatus.TabIndex = 241
@@ -928,19 +926,34 @@ Partial Class Dashboard
         '
         'LabelSDGComment
         '
-        Me.LabelSDGComment.AutoSize = True
-        Me.LabelSDGComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSDGComment.Location = New System.Drawing.Point(602, 101)
+        Me.LabelSDGComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelSDGComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelSDGComment.Location = New System.Drawing.Point(562, 189)
         Me.LabelSDGComment.Name = "LabelSDGComment"
-        Me.LabelSDGComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelSDGComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelSDGComment.TabIndex = 248
         Me.LabelSDGComment.Text = "none"
         '
         'Panel1
         '
         Me.Panel1.AutoScroll = True
-        Me.Panel1.AutoScrollMinSize = New System.Drawing.Size(0, 1170)
+        Me.Panel1.AutoScrollMinSize = New System.Drawing.Size(0, 1750)
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Label41)
+        Me.Panel1.Controls.Add(Me.Label40)
+        Me.Panel1.Controls.Add(Me.Label38)
+        Me.Panel1.Controls.Add(Me.Label37)
+        Me.Panel1.Controls.Add(Me.Label36)
+        Me.Panel1.Controls.Add(Me.Label35)
+        Me.Panel1.Controls.Add(Me.Label34)
+        Me.Panel1.Controls.Add(Me.Label33)
+        Me.Panel1.Controls.Add(Me.Label29)
+        Me.Panel1.Controls.Add(Me.Label28)
+        Me.Panel1.Controls.Add(Me.Label26)
+        Me.Panel1.Controls.Add(Me.Label25)
+        Me.Panel1.Controls.Add(Me.Label21)
+        Me.Panel1.Controls.Add(Me.Label20)
+        Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.LabelFinalDate)
         Me.Panel1.Controls.Add(Me.Label18)
         Me.Panel1.Controls.Add(Me.LabelFinalStatus)
@@ -1051,80 +1064,78 @@ Partial Class Dashboard
         '
         Me.LabelFinanceHeadName.AutoSize = True
         Me.LabelFinanceHeadName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinanceHeadName.Location = New System.Drawing.Point(143, 418)
+        Me.LabelFinanceHeadName.Location = New System.Drawing.Point(153, 702)
         Me.LabelFinanceHeadName.Name = "LabelFinanceHeadName"
-        Me.LabelFinanceHeadName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelFinanceHeadName.Size = New System.Drawing.Size(0, 16)
         Me.LabelFinanceHeadName.TabIndex = 234
-        Me.LabelFinanceHeadName.Text = "LabelName"
-        Me.LabelFinanceHeadName.Visible = False
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(14, 402)
+        Me.Label12.Location = New System.Drawing.Point(10, 702)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(92, 32)
+        Me.Label12.Size = New System.Drawing.Size(87, 32)
         Me.Label12.TabIndex = 233
-        Me.Label12.Text = "Group Head" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Finance:"
+        Me.Label12.Text = "Finance " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Supervisor:"
         '
         'LabelFinanceComment
         '
-        Me.LabelFinanceComment.AutoSize = True
-        Me.LabelFinanceComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinanceComment.Location = New System.Drawing.Point(602, 282)
+        Me.LabelFinanceComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelFinanceComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFinanceComment.Location = New System.Drawing.Point(559, 520)
         Me.LabelFinanceComment.Name = "LabelFinanceComment"
-        Me.LabelFinanceComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelFinanceComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelFinanceComment.TabIndex = 131
         Me.LabelFinanceComment.Text = "none"
         '
         'LabelMarketingComment
         '
-        Me.LabelMarketingComment.AutoSize = True
-        Me.LabelMarketingComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelMarketingComment.Location = New System.Drawing.Point(602, 232)
+        Me.LabelMarketingComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelMarketingComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelMarketingComment.Location = New System.Drawing.Point(562, 439)
         Me.LabelMarketingComment.Name = "LabelMarketingComment"
-        Me.LabelMarketingComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelMarketingComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelMarketingComment.TabIndex = 129
         Me.LabelMarketingComment.Text = "none"
         '
         'LabelPMGComment
         '
-        Me.LabelPMGComment.AutoSize = True
-        Me.LabelPMGComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelPMGComment.Location = New System.Drawing.Point(602, 188)
+        Me.LabelPMGComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelPMGComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPMGComment.Location = New System.Drawing.Point(562, 357)
         Me.LabelPMGComment.Name = "LabelPMGComment"
-        Me.LabelPMGComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelPMGComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelPMGComment.TabIndex = 127
         Me.LabelPMGComment.Text = "none"
         '
         'LabelITOPSComment
         '
-        Me.LabelITOPSComment.AutoSize = True
-        Me.LabelITOPSComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelITOPSComment.Location = New System.Drawing.Point(602, 140)
+        Me.LabelITOPSComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelITOPSComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelITOPSComment.Location = New System.Drawing.Point(562, 272)
         Me.LabelITOPSComment.Name = "LabelITOPSComment"
-        Me.LabelITOPSComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelITOPSComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelITOPSComment.TabIndex = 125
         Me.LabelITOPSComment.Text = "none"
         '
         'LabelSDGSuperComment
         '
-        Me.LabelSDGSuperComment.AutoSize = True
-        Me.LabelSDGSuperComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSDGSuperComment.Location = New System.Drawing.Point(602, 60)
+        Me.LabelSDGSuperComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelSDGSuperComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelSDGSuperComment.Location = New System.Drawing.Point(562, 102)
         Me.LabelSDGSuperComment.Name = "LabelSDGSuperComment"
-        Me.LabelSDGSuperComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelSDGSuperComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelSDGSuperComment.TabIndex = 123
         Me.LabelSDGSuperComment.Text = "none"
         '
         'LabelBDGComment
         '
-        Me.LabelBDGComment.AutoSize = True
-        Me.LabelBDGComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelBDGComment.Location = New System.Drawing.Point(602, 17)
+        Me.LabelBDGComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelBDGComment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelBDGComment.Location = New System.Drawing.Point(562, 19)
         Me.LabelBDGComment.Name = "LabelBDGComment"
-        Me.LabelBDGComment.Size = New System.Drawing.Size(41, 18)
+        Me.LabelBDGComment.Size = New System.Drawing.Size(185, 43)
         Me.LabelBDGComment.TabIndex = 121
         Me.LabelBDGComment.Text = "none"
         '
@@ -1135,7 +1146,7 @@ Partial Class Dashboard
         Me.CheckBoxCashAdv.Enabled = False
         Me.CheckBoxCashAdv.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxCashAdv.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxCashAdv.Location = New System.Drawing.Point(113, 325)
+        Me.CheckBoxCashAdv.Location = New System.Drawing.Point(152, 578)
         Me.CheckBoxCashAdv.Name = "CheckBoxCashAdv"
         Me.CheckBoxCashAdv.Size = New System.Drawing.Size(118, 20)
         Me.CheckBoxCashAdv.TabIndex = 86
@@ -1149,7 +1160,7 @@ Partial Class Dashboard
         Me.CheckBoxFinanceOther.Enabled = False
         Me.CheckBoxFinanceOther.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxFinanceOther.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.CheckBoxFinanceOther.Location = New System.Drawing.Point(309, 325)
+        Me.CheckBoxFinanceOther.Location = New System.Drawing.Point(326, 578)
         Me.CheckBoxFinanceOther.Name = "CheckBoxFinanceOther"
         Me.CheckBoxFinanceOther.Size = New System.Drawing.Size(69, 20)
         Me.CheckBoxFinanceOther.TabIndex = 85
@@ -1160,7 +1171,7 @@ Partial Class Dashboard
         '
         Me.LabelFinanceDate.AutoSize = True
         Me.LabelFinanceDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinanceDate.Location = New System.Drawing.Point(824, 282)
+        Me.LabelFinanceDate.Location = New System.Drawing.Point(818, 522)
         Me.LabelFinanceDate.Name = "LabelFinanceDate"
         Me.LabelFinanceDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelFinanceDate.TabIndex = 84
@@ -1170,7 +1181,7 @@ Partial Class Dashboard
         '
         Me.LabelMarketingDate.AutoSize = True
         Me.LabelMarketingDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelMarketingDate.Location = New System.Drawing.Point(824, 232)
+        Me.LabelMarketingDate.Location = New System.Drawing.Point(818, 440)
         Me.LabelMarketingDate.Name = "LabelMarketingDate"
         Me.LabelMarketingDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelMarketingDate.TabIndex = 82
@@ -1180,7 +1191,7 @@ Partial Class Dashboard
         '
         Me.LabelPMGDate.AutoSize = True
         Me.LabelPMGDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelPMGDate.Location = New System.Drawing.Point(824, 188)
+        Me.LabelPMGDate.Location = New System.Drawing.Point(818, 358)
         Me.LabelPMGDate.Name = "LabelPMGDate"
         Me.LabelPMGDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelPMGDate.TabIndex = 80
@@ -1190,7 +1201,7 @@ Partial Class Dashboard
         '
         Me.LabelITOPSDate.AutoSize = True
         Me.LabelITOPSDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelITOPSDate.Location = New System.Drawing.Point(824, 138)
+        Me.LabelITOPSDate.Location = New System.Drawing.Point(818, 274)
         Me.LabelITOPSDate.Name = "LabelITOPSDate"
         Me.LabelITOPSDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelITOPSDate.TabIndex = 78
@@ -1200,7 +1211,7 @@ Partial Class Dashboard
         '
         Me.LabelSDGSuperDate.AutoSize = True
         Me.LabelSDGSuperDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSDGSuperDate.Location = New System.Drawing.Point(824, 62)
+        Me.LabelSDGSuperDate.Location = New System.Drawing.Point(818, 102)
         Me.LabelSDGSuperDate.Name = "LabelSDGSuperDate"
         Me.LabelSDGSuperDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelSDGSuperDate.TabIndex = 76
@@ -1210,7 +1221,7 @@ Partial Class Dashboard
         '
         Me.LabelBDGDate.AutoSize = True
         Me.LabelBDGDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelBDGDate.Location = New System.Drawing.Point(824, 17)
+        Me.LabelBDGDate.Location = New System.Drawing.Point(818, 19)
         Me.LabelBDGDate.Name = "LabelBDGDate"
         Me.LabelBDGDate.Size = New System.Drawing.Size(53, 16)
         Me.LabelBDGDate.TabIndex = 74
@@ -1220,73 +1231,61 @@ Partial Class Dashboard
         '
         Me.LabelFinanceName.AutoSize = True
         Me.LabelFinanceName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinanceName.Location = New System.Drawing.Point(143, 282)
+        Me.LabelFinanceName.Location = New System.Drawing.Point(153, 522)
         Me.LabelFinanceName.Name = "LabelFinanceName"
-        Me.LabelFinanceName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelFinanceName.Size = New System.Drawing.Size(0, 16)
         Me.LabelFinanceName.TabIndex = 68
-        Me.LabelFinanceName.Text = "LabelName"
-        Me.LabelFinanceName.Visible = False
         '
         'LabelSDGSuperName
         '
         Me.LabelSDGSuperName.AutoSize = True
         Me.LabelSDGSuperName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSDGSuperName.Location = New System.Drawing.Point(143, 62)
+        Me.LabelSDGSuperName.Location = New System.Drawing.Point(153, 102)
         Me.LabelSDGSuperName.Name = "LabelSDGSuperName"
-        Me.LabelSDGSuperName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelSDGSuperName.Size = New System.Drawing.Size(0, 16)
         Me.LabelSDGSuperName.TabIndex = 66
-        Me.LabelSDGSuperName.Text = "LabelName"
-        Me.LabelSDGSuperName.Visible = False
         '
         'LabelPMGName
         '
         Me.LabelPMGName.AutoSize = True
         Me.LabelPMGName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelPMGName.Location = New System.Drawing.Point(143, 188)
+        Me.LabelPMGName.Location = New System.Drawing.Point(153, 358)
         Me.LabelPMGName.Name = "LabelPMGName"
-        Me.LabelPMGName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelPMGName.Size = New System.Drawing.Size(0, 16)
         Me.LabelPMGName.TabIndex = 65
-        Me.LabelPMGName.Text = "LabelName"
-        Me.LabelPMGName.Visible = False
         '
         'LabelMarketingName
         '
         Me.LabelMarketingName.AutoSize = True
         Me.LabelMarketingName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelMarketingName.Location = New System.Drawing.Point(143, 234)
+        Me.LabelMarketingName.Location = New System.Drawing.Point(153, 440)
         Me.LabelMarketingName.Name = "LabelMarketingName"
-        Me.LabelMarketingName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelMarketingName.Size = New System.Drawing.Size(0, 16)
         Me.LabelMarketingName.TabIndex = 63
-        Me.LabelMarketingName.Text = "LabelName"
-        Me.LabelMarketingName.Visible = False
         '
         'LabelITOPSName
         '
         Me.LabelITOPSName.AutoSize = True
         Me.LabelITOPSName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelITOPSName.Location = New System.Drawing.Point(143, 142)
+        Me.LabelITOPSName.Location = New System.Drawing.Point(153, 274)
         Me.LabelITOPSName.Name = "LabelITOPSName"
-        Me.LabelITOPSName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelITOPSName.Size = New System.Drawing.Size(0, 16)
         Me.LabelITOPSName.TabIndex = 62
-        Me.LabelITOPSName.Text = "LabelName"
-        Me.LabelITOPSName.Visible = False
         '
         'LabelBDGName
         '
         Me.LabelBDGName.AutoSize = True
         Me.LabelBDGName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelBDGName.Location = New System.Drawing.Point(143, 19)
+        Me.LabelBDGName.Location = New System.Drawing.Point(153, 19)
         Me.LabelBDGName.Name = "LabelBDGName"
-        Me.LabelBDGName.Size = New System.Drawing.Size(79, 16)
+        Me.LabelBDGName.Size = New System.Drawing.Size(0, 16)
         Me.LabelBDGName.TabIndex = 60
-        Me.LabelBDGName.Text = "LabelName"
-        Me.LabelBDGName.Visible = False
         '
         'LabelFinanceStatus
         '
         Me.LabelFinanceStatus.AutoSize = True
         Me.LabelFinanceStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelFinanceStatus.Location = New System.Drawing.Point(424, 282)
+        Me.LabelFinanceStatus.Location = New System.Drawing.Point(426, 522)
         Me.LabelFinanceStatus.Name = "LabelFinanceStatus"
         Me.LabelFinanceStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelFinanceStatus.TabIndex = 55
@@ -1296,7 +1295,7 @@ Partial Class Dashboard
         '
         Me.LabelMarketingStatus.AutoSize = True
         Me.LabelMarketingStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelMarketingStatus.Location = New System.Drawing.Point(424, 232)
+        Me.LabelMarketingStatus.Location = New System.Drawing.Point(424, 438)
         Me.LabelMarketingStatus.Name = "LabelMarketingStatus"
         Me.LabelMarketingStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelMarketingStatus.TabIndex = 53
@@ -1306,7 +1305,7 @@ Partial Class Dashboard
         '
         Me.LabelPMGStatus.AutoSize = True
         Me.LabelPMGStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelPMGStatus.Location = New System.Drawing.Point(424, 188)
+        Me.LabelPMGStatus.Location = New System.Drawing.Point(424, 356)
         Me.LabelPMGStatus.Name = "LabelPMGStatus"
         Me.LabelPMGStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelPMGStatus.TabIndex = 51
@@ -1316,7 +1315,7 @@ Partial Class Dashboard
         '
         Me.Label39.AutoSize = True
         Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(10, 282)
+        Me.Label39.Location = New System.Drawing.Point(10, 522)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(67, 16)
         Me.Label39.TabIndex = 46
@@ -1326,7 +1325,7 @@ Partial Class Dashboard
         '
         Me.LabelITOPSStatus.AutoSize = True
         Me.LabelITOPSStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelITOPSStatus.Location = New System.Drawing.Point(424, 140)
+        Me.LabelITOPSStatus.Location = New System.Drawing.Point(424, 272)
         Me.LabelITOPSStatus.Name = "LabelITOPSStatus"
         Me.LabelITOPSStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelITOPSStatus.TabIndex = 45
@@ -1336,7 +1335,7 @@ Partial Class Dashboard
         '
         Me.LabelSDGSuperStatus.AutoSize = True
         Me.LabelSDGSuperStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSDGSuperStatus.Location = New System.Drawing.Point(424, 60)
+        Me.LabelSDGSuperStatus.Location = New System.Drawing.Point(424, 100)
         Me.LabelSDGSuperStatus.Name = "LabelSDGSuperStatus"
         Me.LabelSDGSuperStatus.Size = New System.Drawing.Size(61, 18)
         Me.LabelSDGSuperStatus.TabIndex = 43
@@ -1346,7 +1345,7 @@ Partial Class Dashboard
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(10, 234)
+        Me.Label24.Location = New System.Drawing.Point(10, 440)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(80, 16)
         Me.Label24.TabIndex = 40
@@ -1356,7 +1355,7 @@ Partial Class Dashboard
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(10, 188)
+        Me.Label27.Location = New System.Drawing.Point(10, 358)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(45, 16)
         Me.Label27.TabIndex = 37
@@ -1366,7 +1365,7 @@ Partial Class Dashboard
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(10, 140)
+        Me.Label31.Location = New System.Drawing.Point(10, 274)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(61, 16)
         Me.Label31.TabIndex = 33
@@ -1386,7 +1385,7 @@ Partial Class Dashboard
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(10, 62)
+        Me.Label16.Location = New System.Drawing.Point(10, 102)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(123, 16)
         Me.Label16.TabIndex = 28
@@ -1406,7 +1405,7 @@ Partial Class Dashboard
         '
         Me.Label61.AutoSize = True
         Me.Label61.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label61.Location = New System.Drawing.Point(835, 240)
+        Me.Label61.Location = New System.Drawing.Point(825, 240)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(48, 24)
         Me.Label61.TabIndex = 174
@@ -1585,6 +1584,141 @@ Partial Class Dashboard
         Me.ButtonLogOut.Text = "LOGOUT"
         Me.ButtonLogOut.UseVisualStyleBackColor = False
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(10, 73)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(877, 13)
+        Me.Label17.TabIndex = 537
+        Me.Label17.Text = resources.GetString("Label17.Text")
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(10, 157)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(877, 13)
+        Me.Label20.TabIndex = 538
+        Me.Label20.Text = resources.GetString("Label20.Text")
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(10, 242)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(877, 13)
+        Me.Label21.TabIndex = 539
+        Me.Label21.Text = resources.GetString("Label21.Text")
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(10, 327)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(877, 13)
+        Me.Label25.TabIndex = 540
+        Me.Label25.Text = resources.GetString("Label25.Text")
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(10, 410)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(877, 13)
+        Me.Label26.TabIndex = 541
+        Me.Label26.Text = resources.GetString("Label26.Text")
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(10, 491)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(877, 13)
+        Me.Label28.TabIndex = 542
+        Me.Label28.Text = resources.GetString("Label28.Text")
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(10, 669)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(877, 13)
+        Me.Label29.TabIndex = 543
+        Me.Label29.Text = resources.GetString("Label29.Text")
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(10, 1439)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(877, 13)
+        Me.Label33.TabIndex = 544
+        Me.Label33.Text = resources.GetString("Label33.Text")
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(10, 754)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(877, 13)
+        Me.Label34.TabIndex = 545
+        Me.Label34.Text = resources.GetString("Label34.Text")
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(10, 963)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(877, 13)
+        Me.Label35.TabIndex = 546
+        Me.Label35.Text = resources.GetString("Label35.Text")
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(10, 1048)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(877, 13)
+        Me.Label36.TabIndex = 547
+        Me.Label36.Text = resources.GetString("Label36.Text")
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(10, 1176)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(877, 13)
+        Me.Label37.TabIndex = 548
+        Me.Label37.Text = resources.GetString("Label37.Text")
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(10, 1258)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(877, 13)
+        Me.Label38.TabIndex = 549
+        Me.Label38.Text = resources.GetString("Label38.Text")
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(10, 1528)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(877, 13)
+        Me.Label40.TabIndex = 550
+        Me.Label40.Text = resources.GetString("Label40.Text")
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(10, 1604)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(877, 13)
+        Me.Label41.TabIndex = 551
+        Me.Label41.Text = resources.GetString("Label41.Text")
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1750,4 +1884,19 @@ Partial Class Dashboard
     Friend WithEvents Label3 As Label
     Friend WithEvents ButtonRefresh As Button
     Friend WithEvents ButtonLogOut As Button
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label17 As Label
 End Class

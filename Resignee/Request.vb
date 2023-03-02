@@ -16,6 +16,7 @@ Public Class Request
         ComboBox2.SelectedItem = "BDG"
     End Sub
     Private Sub Request_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        dbs.closecon()
         StartUp.Show()
     End Sub
 
