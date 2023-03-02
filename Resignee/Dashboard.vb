@@ -30,6 +30,7 @@ Public Class Dashboard
 
 
     Private Sub Dashboard_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        dbs.closecon()
         Login.Show()
 
     End Sub

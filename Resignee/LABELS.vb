@@ -5,94 +5,117 @@ Public Class LABELS
     Dim cmd As New MySqlCommand
     Dim x As Integer
 
-    Public Sub LabelHRName()
-
-        Dim sql As String = "SELECT BDGDeptName, SDGSuperName, SDGDeptName, ITOPSDeptName, PMGDeptName, MarketingDeptName, FinanceHeadName, FinanceDeptName, AdminGroupName, AdminHeadName, SysAdminName, SysAdminHeadName, HRHeadName, HRGroupName, ScheduleInterviewerName, ExitInterviewBy FROM historyrequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
-
-        Dim cmd As New MySqlCommand(sql, dbs.getconn())
+    Public Sub LabelInfoEmp()
+        Dim sql As String
+        Dim empID As String = Login.TextBox1.Text
+        Dim query = "SELECT `empID` FROM `historyrequest` WHERE `empID`='" & empID & "'"
+        Dim command As New MySqlCommand(query, dbs.getconn)
         dbs.opencon()
-        Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
-        If reader.HasRows Then
-            While reader.Read()
-                Dashboard.LabelBDGName.Text = If(String.IsNullOrEmpty(reader("BDGDeptName").ToString()), "Pending", reader("BDGDeptName").ToString())
-                Dashboard.LabelSDGSuperName.Text = If(String.IsNullOrEmpty(reader("SDGSuperName").ToString()), "Pending", reader("SDGSuperName").ToString())
-                Dashboard.LabelSDGName.Text = If(String.IsNullOrEmpty(reader("SDGDeptName").ToString()), "Pending", reader("SDGDeptName").ToString())
-                Dashboard.LabelITOPSName.Text = If(String.IsNullOrEmpty(reader("ITOPSDeptName").ToString()), "Pending", reader("ITOPSDeptName").ToString())
-                Dashboard.LabelPMGName.Text = If(String.IsNullOrEmpty(reader("PMGDeptName").ToString()), "Pending", reader("PMGDeptName").ToString())
-                Dashboard.LabelMarketingName.Text = If(String.IsNullOrEmpty(reader("MarketingDeptName").ToString()), "Pending", reader("MarketingDeptName").ToString())
-                Dashboard.LabelFinanceHeadName.Text = If(String.IsNullOrEmpty(reader("FinanceHeadName").ToString()), "Pending", reader("FinanceHeadName").ToString())
-                Dashboard.LabelFinanceName.Text = If(String.IsNullOrEmpty(reader("FinanceDeptName").ToString()), "Pending", reader("FinanceDeptName").ToString())
-                Dashboard.LabelAdminName.Text = If(String.IsNullOrEmpty(reader("AdminGroupName").ToString()), "Pending", reader("AdminGroupName").ToString())
-                Dashboard.LabelAdminHeadName.Text = If(String.IsNullOrEmpty(reader("AdminHeadName").ToString()), "Pending", reader("AdminHeadName").ToString())
-                Dashboard.LabelSysAdminName.Text = If(String.IsNullOrEmpty(reader("SysAdminName").ToString()), "Pending", reader("SysAdminName").ToString())
-                Dashboard.LabelSysAdminHeadName.Text = If(String.IsNullOrEmpty(reader("SysAdminHeadName").ToString()), "Pending", reader("SysAdminHeadName").ToString())
-                Dashboard.LabelHRGroupName.Text = If(String.IsNullOrEmpty(reader("HRGroupName").ToString()), "Pending", reader("HRGroupName").ToString())
-                Dashboard.LabelHRHeadName.Text = If(String.IsNullOrEmpty(reader("HRHeadName").ToString()), "Pending", reader("HRHeadName").ToString())
-                Dashboard.LabelHRInterviewName.Text = If(String.IsNullOrEmpty(reader("ScheduleInterviewerName").ToString()), "Pending", reader("ScheduleInterviewerName").ToString())
-                Dashboard.LabelFinalName.Text = If(String.IsNullOrEmpty(reader("ExitInterviewBy").ToString()), "Pending", reader("ExitInterviewBy").ToString())
-
-            End While
-            reader.Close()
+        Dim scalarResult As Object = command.ExecuteScalar()
+        If scalarResult IsNot Nothing Then
+            sql = "SELECT Name, empID, dept, position, clearPurpose, employeeStatus, LastDayEmploy FROM historyrequest WHERE empID='" & empID & "'"
         Else
-            ' Update table name to completerequest
-            Dim sql1 As String = "SELECT BDGDeptName, SDGSuperName, SDGDeptName, ITOPSDeptName, PMGDeptName, MarketingDeptName, FinanceHeadName, FinanceDeptName, AdminGroupName, AdminHeadName, SysAdminName, SysAdminHeadName, HRHeadName, HRGroupName, ScheduleInterviewerName, ExitInterviewBy FROM completerequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
-            cmd = New MySqlCommand(sql1, dbs.getconn())
-            dbs.opencon()
-            reader.Close()
-            Dim readers As MySqlDataReader = cmd.ExecuteReader()
-            If readers.HasRows Then
-                While readers.Read()
-                    Dashboard.LabelBDGName.Text = If(String.IsNullOrEmpty(reader("BDGDeptName").ToString()), "Pending", reader("BDGDeptName").ToString())
-                    Dashboard.LabelSDGSuperName.Text = If(String.IsNullOrEmpty(reader("SDGSuperName").ToString()), "Pending", reader("SDGSuperName").ToString())
-                    Dashboard.LabelSDGName.Text = If(String.IsNullOrEmpty(reader("SDGDeptName").ToString()), "Pending", reader("SDGDeptName").ToString())
-                    Dashboard.LabelITOPSName.Text = If(String.IsNullOrEmpty(reader("ITOPSDeptName").ToString()), "Pending", reader("ITOPSDeptName").ToString())
-                    Dashboard.LabelPMGName.Text = If(String.IsNullOrEmpty(reader("PMGDeptName").ToString()), "Pending", reader("PMGDeptName").ToString())
-                    Dashboard.LabelMarketingName.Text = If(String.IsNullOrEmpty(reader("MarketingDeptName").ToString()), "Pending", reader("MarketingDeptName").ToString())
-                    Dashboard.LabelFinanceHeadName.Text = If(String.IsNullOrEmpty(reader("FinanceHeadName").ToString()), "Pending", reader("FinanceHeadName").ToString())
-                    Dashboard.LabelFinanceName.Text = If(String.IsNullOrEmpty(reader("FinanceDeptName").ToString()), "Pending", reader("FinanceDeptName").ToString())
-                    Dashboard.LabelAdminName.Text = If(String.IsNullOrEmpty(reader("AdminGroupName").ToString()), "Pending", reader("AdminGroupName").ToString())
-                    Dashboard.LabelAdminHeadName.Text = If(String.IsNullOrEmpty(reader("AdminHeadName").ToString()), "Pending", reader("AdminHeadName").ToString())
-                    Dashboard.LabelSysAdminName.Text = If(String.IsNullOrEmpty(reader("SysAdminName").ToString()), "Pending", reader("SysAdminName").ToString())
-                    Dashboard.LabelSysAdminHeadName.Text = If(String.IsNullOrEmpty(reader("SysAdminHeadName").ToString()), "Pending", reader("SysAdminHeadName").ToString())
-                    Dashboard.LabelHRGroupName.Text = If(String.IsNullOrEmpty(reader("HRGroupName").ToString()), "Pending", reader("HRGroupName").ToString())
-                    Dashboard.LabelHRHeadName.Text = If(String.IsNullOrEmpty(reader("HRHeadName").ToString()), "Pending", reader("HRHeadName").ToString())
-                    Dashboard.LabelHRInterviewName.Text = If(String.IsNullOrEmpty(reader("ScheduleInterviewerName").ToString()), "Pending", reader("ScheduleInterviewerName").ToString())
-                    Dashboard.LabelFinalName.Text = If(String.IsNullOrEmpty(reader("ExitInterviewBy").ToString()), "Pending", reader("ExitInterviewBy").ToString())
-
-                End While
-            End If
-            readers.Close()
+            sql = "SELECT Name, empID, dept, position, clearPurpose, employeeStatus, LastDayEmploy FROM completerequest WHERE empID='" & empID & "'"
         End If
 
+        Dim cmd As New MySqlCommand(sql, dbs.getconn())
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
+        While reader.Read()
+            Dashboard.LabelEmpName.Text = If(String.IsNullOrEmpty(reader("Name").ToString()), "Pending", reader("Name").ToString())
+            Dashboard.LabelEmpID.Text = If(String.IsNullOrEmpty(reader("empID").ToString()), "Pending", reader("empID").ToString())
+            Dashboard.LabelDept.Text = If(String.IsNullOrEmpty(reader("dept").ToString()), "Pending", reader("dept").ToString())
+            Dashboard.LabelPos.Text = If(String.IsNullOrEmpty(reader("position").ToString()), "Pending", reader("position").ToString())
+            Dashboard.LabelPurpose.Text = If(String.IsNullOrEmpty(reader("clearPurpose").ToString()), "Pending", reader("clearPurpose").ToString())
+            Dashboard.LabelStatus.Text = If(String.IsNullOrEmpty(reader("employeeStatus").ToString()), "Pending", reader("employeeStatus").ToString())
+            Dashboard.LabelLastDay.Text = If(String.IsNullOrEmpty(reader("LastDayEmploy").ToString()), "Pending", DateTime.Parse(reader("LastDayEmploy").ToString()).ToString("MMM-dd-yyyy"))
+        End While
+
+        reader.Close()
+        dbs.closecon()
+    End Sub
+    Public Sub LabelHRName()
+        Dim sql As String
+        Dim empID As String = Dashboard.LabelEmpID.Text
+        Dim query = "SELECT `empID` FROM `historyrequest` WHERE `empID`='" & empID & "'"
+        Dim command As New MySqlCommand(query, dbs.getconn)
+        dbs.opencon()
+
+        Dim scalarResult As Object = command.ExecuteScalar()
+        If scalarResult IsNot Nothing Then
+
+            sql = "SELECT BDGDeptName, SDGSuperName, SDGDeptName, ITOPSDeptName, PMGDeptName, MarketingDeptName, FinanceHeadName, FinanceDeptName, AdminGroupName, AdminHeadName, SysAdminName, SysAdminHeadName, HRHeadName, HRGroupName, ScheduleInterviewerName, ExitInterviewBy FROM historyrequest WHERE empID='" & empID & "'"
+
+        Else
+            sql = "SELECT BDGDeptName, SDGSuperName, SDGDeptName, ITOPSDeptName, PMGDeptName, MarketingDeptName, FinanceHeadName, FinanceDeptName, AdminGroupName, AdminHeadName, SysAdminName, SysAdminHeadName, HRHeadName, HRGroupName, ScheduleInterviewerName, ExitInterviewBy FROM completerequest WHERE empID='" & empID & "'"
+
+
+        End If
+
+        Dim cmd As New MySqlCommand(sql, dbs.getconn())
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+        While reader.Read()
+            Dashboard.LabelBDGName.Text = If(String.IsNullOrEmpty(reader("BDGDeptName").ToString()), "Pending", reader("BDGDeptName").ToString())
+        Dashboard.LabelSDGSuperName.Text = If(String.IsNullOrEmpty(reader("SDGSuperName").ToString()), "Pending", reader("SDGSuperName").ToString())
+        Dashboard.LabelSDGName.Text = If(String.IsNullOrEmpty(reader("SDGDeptName").ToString()), "Pending", reader("SDGDeptName").ToString())
+        Dashboard.LabelITOPSName.Text = If(String.IsNullOrEmpty(reader("ITOPSDeptName").ToString()), "Pending", reader("ITOPSDeptName").ToString())
+        Dashboard.LabelPMGName.Text = If(String.IsNullOrEmpty(reader("PMGDeptName").ToString()), "Pending", reader("PMGDeptName").ToString())
+        Dashboard.LabelMarketingName.Text = If(String.IsNullOrEmpty(reader("MarketingDeptName").ToString()), "Pending", reader("MarketingDeptName").ToString())
+        Dashboard.LabelFinanceHeadName.Text = If(String.IsNullOrEmpty(reader("FinanceHeadName").ToString()), "Pending", reader("FinanceHeadName").ToString())
+        Dashboard.LabelFinanceName.Text = If(String.IsNullOrEmpty(reader("FinanceDeptName").ToString()), "Pending", reader("FinanceDeptName").ToString())
+        Dashboard.LabelAdminName.Text = If(String.IsNullOrEmpty(reader("AdminGroupName").ToString()), "Pending", reader("AdminGroupName").ToString())
+        Dashboard.LabelAdminHeadName.Text = If(String.IsNullOrEmpty(reader("AdminHeadName").ToString()), "Pending", reader("AdminHeadName").ToString())
+        Dashboard.LabelSysAdminName.Text = If(String.IsNullOrEmpty(reader("SysAdminName").ToString()), "Pending", reader("SysAdminName").ToString())
+        Dashboard.LabelSysAdminHeadName.Text = If(String.IsNullOrEmpty(reader("SysAdminHeadName").ToString()), "Pending", reader("SysAdminHeadName").ToString())
+        Dashboard.LabelHRGroupName.Text = If(String.IsNullOrEmpty(reader("HRGroupName").ToString()), "Pending", reader("HRGroupName").ToString())
+        Dashboard.LabelHRHeadName.Text = If(String.IsNullOrEmpty(reader("HRHeadName").ToString()), "Pending", reader("HRHeadName").ToString())
+        Dashboard.LabelHRInterviewName.Text = If(String.IsNullOrEmpty(reader("ScheduleInterviewerName").ToString()), "Pending", reader("ScheduleInterviewerName").ToString())
+        Dashboard.LabelFinalName.Text = If(String.IsNullOrEmpty(reader("ExitInterviewBy").ToString()), "Pending", reader("ExitInterviewBy").ToString())
+        End While
+
+        reader.Close()
         dbs.closecon()
     End Sub
 
     Public Sub LabelHRStatus()
-        Dim sql As String = "SELECT BDGDeptStatus, SDGSuperStatus, SDGDeptStatus, ITOPSDeptStatus, PMGDeptStatus, MarketingDeptStatus, FinanceHeadStatus, FinanceDeptStatus, AdminGroupStatus, AdminHeadStatus, SysAdminStatus, SysAdminHeadStatus, HRHeadStatus, HRGroupStatus, ScheduleInterviewStatus, ExitInterviewStatus FROM historyrequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+        Dim sql As String
+        Dim query = "SELECT `empID` FROM `historyrequest` WHERE `empID`='" & Dashboard.LabelEmpID.Text & "'"
+        Dim command As New MySqlCommand(query, dbs.getconn)
+        dbs.opencon()
+
+        Dim scalarResult As Object = command.ExecuteScalar()
+        If scalarResult IsNot Nothing Then
+
+            sql = "SELECT BDGDeptStatus, SDGSuperStatus, SDGDeptStatus, ITOPSDeptStatus, PMGDeptStatus, MarketingDeptStatus, FinanceHeadStatus, FinanceDeptStatus, AdminGroupStatus, AdminHeadStatus, SysAdminStatus, SysAdminHeadStatus, HRHeadStatus, HRGroupStatus, ScheduleInterviewStatus, ExitInterviewStatus FROM historyrequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+
+        Else
+            sql = "SELECT BDGDeptStatus, SDGSuperStatus, SDGDeptStatus, ITOPSDeptStatus, PMGDeptStatus, MarketingDeptStatus, FinanceHeadStatus, FinanceDeptStatus, AdminGroupStatus, AdminHeadStatus, SysAdminStatus, SysAdminHeadStatus, HRHeadStatus, HRGroupStatus, ScheduleInterviewStatus, ExitInterviewStatus FROM completerequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+
+
+        End If
 
         Dim cmd As New MySqlCommand(sql, dbs.getconn())
-        dbs.opencon()
         Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
         While reader.Read()
             Dashboard.LabelBDGStatus.Text = If(String.IsNullOrEmpty(reader("BDGDeptStatus").ToString()), "Pending", reader("BDGDeptStatus").ToString())
-            Dashboard.LabelSDGSuperStatus.Text = If(String.IsNullOrEmpty(reader("SDGSuperStatus").ToString()), "Pending", reader("SDGSuperStatus").ToString())
-            Dashboard.LabelSDGStatus.Text = If(String.IsNullOrEmpty(reader("SDGDeptStatus").ToString()), "Pending", reader("SDGDeptStatus").ToString())
-            Dashboard.LabelITOPSStatus.Text = If(String.IsNullOrEmpty(reader("ITOPSDeptStatus").ToString()), "Pending", reader("ITOPSDeptStatus").ToString())
-            Dashboard.LabelPMGStatus.Text = If(String.IsNullOrEmpty(reader("PMGDeptStatus").ToString()), "Pending", reader("PMGDeptStatus").ToString())
-            Dashboard.LabelMarketingStatus.Text = If(String.IsNullOrEmpty(reader("MarketingDeptStatus").ToString()), "Pending", reader("MarketingDeptStatus").ToString())
-            Dashboard.LabelFinanceHeadStatus.Text = If(String.IsNullOrEmpty(reader("FinanceHeadStatus").ToString()), "Pending", reader("FinanceHeadStatus").ToString())
-            Dashboard.LabelFinanceStatus.Text = If(String.IsNullOrEmpty(reader("FinanceDeptStatus").ToString()), "Pending", reader("FinanceDeptStatus").ToString())
-            Dashboard.LabelAdminStatus.Text = If(String.IsNullOrEmpty(reader("AdminGroupStatus").ToString()), "Pending", reader("AdminGroupStatus").ToString())
-            Dashboard.LabelAdminHeadStatus.Text = If(String.IsNullOrEmpty(reader("AdminHeadStatus").ToString()), "Pending", reader("AdminHeadStatus").ToString())
-            Dashboard.LabelSysAdminStatus.Text = If(String.IsNullOrEmpty(reader("SysAdminStatus").ToString()), "Pending", reader("SysAdminStatus").ToString())
-            Dashboard.LabelSysAdminHeadStatus.Text = If(String.IsNullOrEmpty(reader("SysAdminHeadStatus").ToString()), "Pending", reader("SysAdminHeadStatus").ToString())
-            Dashboard.LabelHRGroupStatus.Text = If(String.IsNullOrEmpty(reader("HRGroupStatus").ToString()), "Pending", reader("HRGroupStatus").ToString())
-            Dashboard.LabelHRHeadStatus.Text = If(String.IsNullOrEmpty(reader("HRHeadStatus").ToString()), "Pending", reader("HRHeadStatus").ToString())
-            Dashboard.LabelHRInterviewStatus.Text = If(String.IsNullOrEmpty(reader("ScheduleInterviewStatus").ToString()), "Pending", reader("ScheduleInterviewStatus").ToString())
-            Dashboard.LabelFinalStatus.Text = If(String.IsNullOrEmpty(reader("ExitInterviewStatus").ToString()), "Pending", reader("ExitInterviewStatus").ToString())
+        Dashboard.LabelSDGSuperStatus.Text = If(String.IsNullOrEmpty(reader("SDGSuperStatus").ToString()), "Pending", reader("SDGSuperStatus").ToString())
+        Dashboard.LabelSDGStatus.Text = If(String.IsNullOrEmpty(reader("SDGDeptStatus").ToString()), "Pending", reader("SDGDeptStatus").ToString())
+        Dashboard.LabelITOPSStatus.Text = If(String.IsNullOrEmpty(reader("ITOPSDeptStatus").ToString()), "Pending", reader("ITOPSDeptStatus").ToString())
+        Dashboard.LabelPMGStatus.Text = If(String.IsNullOrEmpty(reader("PMGDeptStatus").ToString()), "Pending", reader("PMGDeptStatus").ToString())
+        Dashboard.LabelMarketingStatus.Text = If(String.IsNullOrEmpty(reader("MarketingDeptStatus").ToString()), "Pending", reader("MarketingDeptStatus").ToString())
+        Dashboard.LabelFinanceHeadStatus.Text = If(String.IsNullOrEmpty(reader("FinanceHeadStatus").ToString()), "Pending", reader("FinanceHeadStatus").ToString())
+        Dashboard.LabelFinanceStatus.Text = If(String.IsNullOrEmpty(reader("FinanceDeptStatus").ToString()), "Pending", reader("FinanceDeptStatus").ToString())
+        Dashboard.LabelAdminStatus.Text = If(String.IsNullOrEmpty(reader("AdminGroupStatus").ToString()), "Pending", reader("AdminGroupStatus").ToString())
+        Dashboard.LabelAdminHeadStatus.Text = If(String.IsNullOrEmpty(reader("AdminHeadStatus").ToString()), "Pending", reader("AdminHeadStatus").ToString())
+        Dashboard.LabelSysAdminStatus.Text = If(String.IsNullOrEmpty(reader("SysAdminStatus").ToString()), "Pending", reader("SysAdminStatus").ToString())
+        Dashboard.LabelSysAdminHeadStatus.Text = If(String.IsNullOrEmpty(reader("SysAdminHeadStatus").ToString()), "Pending", reader("SysAdminHeadStatus").ToString())
+        Dashboard.LabelHRGroupStatus.Text = If(String.IsNullOrEmpty(reader("HRGroupStatus").ToString()), "Pending", reader("HRGroupStatus").ToString())
+        Dashboard.LabelHRHeadStatus.Text = If(String.IsNullOrEmpty(reader("HRHeadStatus").ToString()), "Pending", reader("HRHeadStatus").ToString())
+        Dashboard.LabelHRInterviewStatus.Text = If(String.IsNullOrEmpty(reader("ScheduleInterviewStatus").ToString()), "Pending", reader("ScheduleInterviewStatus").ToString())
+        Dashboard.LabelFinalStatus.Text = If(String.IsNullOrEmpty(reader("ExitInterviewStatus").ToString()), "Pending", reader("ExitInterviewStatus").ToString())
 
         End While
 
@@ -103,27 +126,42 @@ Public Class LABELS
     End Sub
 
     Public Sub LabelHRComment()
-        Dim sql As String = "SELECT BDGDeptComment, SDGSuperComment, SDGDeptComment, ITOPSDeptComment, PMGDeptComment, MarketingDeptComment, FinanceHeadComment, FinanceDeptComment, AdminGroupComment, AdminHeadComment, SysAdminComment, SysAdminHeadComment, HRHeadComment, HRGroupComment FROM historyrequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+        Dim sql As String
+        Dim query = "SELECT `empID` FROM `historyrequest` WHERE `empID`='" & Dashboard.LabelEmpID.Text & "'"
+        Dim command As New MySqlCommand(query, dbs.getconn)
+        dbs.opencon()
+
+        Dim scalarResult As Object = command.ExecuteScalar()
+        If scalarResult IsNot Nothing Then
+
+            sql = "SELECT BDGDeptComment, SDGSuperComment, SDGDeptComment, ITOPSDeptComment, PMGDeptComment, MarketingDeptComment, FinanceHeadComment, FinanceDeptComment, AdminGroupComment, AdminHeadComment, SysAdminComment, SysAdminHeadComment, HRHeadComment, HRGroupComment FROM historyrequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+
+        Else
+            sql = "SELECT BDGDeptComment, SDGSuperComment, SDGDeptComment, ITOPSDeptComment, PMGDeptComment, MarketingDeptComment, FinanceHeadComment, FinanceDeptComment, AdminGroupComment, AdminHeadComment, SysAdminComment, SysAdminHeadComment, HRHeadComment, HRGroupComment FROM completerequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+
+
+        End If
 
         Dim cmd As New MySqlCommand(sql, dbs.getconn())
-        dbs.opencon()
         Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
         While reader.Read()
             Dashboard.LabelBDGComment.Text = If(String.IsNullOrEmpty(reader("BDGDeptComment").ToString()), "Pending", reader("BDGDeptComment").ToString())
-            Dashboard.LabelSDGSuperComment.Text = If(String.IsNullOrEmpty(reader("SDGSuperComment").ToString()), "Pending", reader("SDGSuperComment").ToString())
-            Dashboard.LabelSDGComment.Text = If(String.IsNullOrEmpty(reader("SDGDeptComment").ToString()), "Pending", reader("SDGDeptComment").ToString())
-            Dashboard.LabelITOPSComment.Text = If(String.IsNullOrEmpty(reader("ITOPSDeptComment").ToString()), "Pending", reader("ITOPSDeptComment").ToString())
-            Dashboard.LabelPMGComment.Text = If(String.IsNullOrEmpty(reader("PMGDeptComment").ToString()), "Pending", reader("PMGDeptComment").ToString())
-            Dashboard.LabelMarketingComment.Text = If(String.IsNullOrEmpty(reader("MarketingDeptComment").ToString()), "Pending", reader("MarketingDeptComment").ToString())
-            Dashboard.LabelFinanceHeadComment.Text = If(String.IsNullOrEmpty(reader("FinanceHeadComment").ToString()), "Pending", reader("FinanceHeadComment").ToString())
-            Dashboard.LabelFinanceComment.Text = If(String.IsNullOrEmpty(reader("FinanceDeptComment").ToString()), "Pending", reader("FinanceDeptComment").ToString())
-            Dashboard.LabelAdminComment.Text = If(String.IsNullOrEmpty(reader("AdminGroupComment").ToString()), "Pending", reader("AdminGroupComment").ToString())
-            Dashboard.LabelAdminHeadComment.Text = If(String.IsNullOrEmpty(reader("AdminHeadComment").ToString()), "Pending", reader("AdminHeadComment").ToString())
-            Dashboard.LabelSysAdminComment.Text = If(String.IsNullOrEmpty(reader("SysAdminComment").ToString()), "Pending", reader("SysAdminComment").ToString())
-            Dashboard.LabelSysAdminHeadComment.Text = If(String.IsNullOrEmpty(reader("SysAdminHeadComment").ToString()), "Pending", reader("SysAdminHeadComment").ToString())
-            Dashboard.LabelHRGroupComment.Text = If(String.IsNullOrEmpty(reader("HRGroupComment").ToString()), "Pending", reader("HRGroupComment").ToString())
-            Dashboard.LabelHRHeadComment.Text = If(String.IsNullOrEmpty(reader("HRHeadComment").ToString()), "Pending", reader("HRHeadComment").ToString())
+        Dashboard.LabelSDGSuperComment.Text = If(String.IsNullOrEmpty(reader("SDGSuperComment").ToString()), "Pending", reader("SDGSuperComment").ToString())
+        Dashboard.LabelSDGComment.Text = If(String.IsNullOrEmpty(reader("SDGDeptComment").ToString()), "Pending", reader("SDGDeptComment").ToString())
+        Dashboard.LabelITOPSComment.Text = If(String.IsNullOrEmpty(reader("ITOPSDeptComment").ToString()), "Pending", reader("ITOPSDeptComment").ToString())
+        Dashboard.LabelPMGComment.Text = If(String.IsNullOrEmpty(reader("PMGDeptComment").ToString()), "Pending", reader("PMGDeptComment").ToString())
+        Dashboard.LabelMarketingComment.Text = If(String.IsNullOrEmpty(reader("MarketingDeptComment").ToString()), "Pending", reader("MarketingDeptComment").ToString())
+        Dashboard.LabelFinanceHeadComment.Text = If(String.IsNullOrEmpty(reader("FinanceHeadComment").ToString()), "Pending", reader("FinanceHeadComment").ToString())
+        Dashboard.LabelFinanceComment.Text = If(String.IsNullOrEmpty(reader("FinanceDeptComment").ToString()), "Pending", reader("FinanceDeptComment").ToString())
+        Dashboard.LabelAdminComment.Text = If(String.IsNullOrEmpty(reader("AdminGroupComment").ToString()), "Pending", reader("AdminGroupComment").ToString())
+        Dashboard.LabelAdminHeadComment.Text = If(String.IsNullOrEmpty(reader("AdminHeadComment").ToString()), "Pending", reader("AdminHeadComment").ToString())
+        Dashboard.LabelSysAdminComment.Text = If(String.IsNullOrEmpty(reader("SysAdminComment").ToString()), "Pending", reader("SysAdminComment").ToString())
+        Dashboard.LabelSysAdminHeadComment.Text = If(String.IsNullOrEmpty(reader("SysAdminHeadComment").ToString()), "Pending", reader("SysAdminHeadComment").ToString())
+        Dashboard.LabelHRGroupComment.Text = If(String.IsNullOrEmpty(reader("HRGroupComment").ToString()), "Pending", reader("HRGroupComment").ToString())
+        Dashboard.LabelHRHeadComment.Text = If(String.IsNullOrEmpty(reader("HRHeadComment").ToString()), "Pending", reader("HRHeadComment").ToString())
+
+
 
 
         End While
@@ -136,29 +174,45 @@ Public Class LABELS
     End Sub
 
     Public Sub LabelHRDate()
-        Dim sql As String = "SELECT BDGDeptDate, SDGSuperDate, SDGDeptDate, ITOPSDeptDate, PMGDeptDate, MarketingDeptDate, FinanceHeadDate, FinanceDeptDate, AdminGroupDate, AdminHeadDate, SysAdminDate, SysAdminHeadDate, HRHeadDate, HRGroupDate, ScheduleInterviewDate, ExitInterviewDate FROM historyrequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+        Dim sql As String
+        Dim query = "SELECT `empID` FROM `historyrequest` WHERE `empID`='" & Dashboard.LabelEmpID.Text & "'"
+        Dim command As New MySqlCommand(query, dbs.getconn)
+        dbs.opencon()
+
+        Dim scalarResult As Object = command.ExecuteScalar()
+        If scalarResult IsNot Nothing Then
+
+            sql = "SELECT BDGDeptDate, SDGSuperDate, SDGDeptDate, ITOPSDeptDate, PMGDeptDate, MarketingDeptDate, FinanceHeadDate, FinanceDeptDate, AdminGroupDate, AdminHeadDate, SysAdminDate, SysAdminHeadDate, HRHeadDate, HRGroupDate, ScheduleInterviewDate, ExitInterviewDate FROM historyrequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+
+        Else
+            sql = "SELECT BDGDeptDate, SDGSuperDate, SDGDeptDate, ITOPSDeptDate, PMGDeptDate, MarketingDeptDate, FinanceHeadDate, FinanceDeptDate, AdminGroupDate, AdminHeadDate, SysAdminDate, SysAdminHeadDate, HRHeadDate, HRGroupDate, ScheduleInterviewDate, ExitInterviewDate FROM completerequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+
+
+        End If
+
+
 
         Dim cmd As New MySqlCommand(sql, dbs.getconn())
-        dbs.opencon()
         Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
         While reader.Read()
             Dashboard.LabelBDGDate.Text = If(String.IsNullOrEmpty(reader("BDGDeptDate").ToString()), "Pending", DateTime.Parse(reader("BDGDeptDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelSDGSuperDate.Text = If(String.IsNullOrEmpty(reader("SDGSuperDate").ToString()), "Pending", DateTime.Parse(reader("SDGSuperDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelSDGDate.Text = If(String.IsNullOrEmpty(reader("SDGDeptDate").ToString()), "Pending", DateTime.Parse(reader("SDGDeptDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelITOPSDate.Text = If(String.IsNullOrEmpty(reader("ITOPSDeptDate").ToString()), "Pending", DateTime.Parse(reader("ITOPSDeptDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelPMGDate.Text = If(String.IsNullOrEmpty(reader("PMGDeptDate").ToString()), "Pending", DateTime.Parse(reader("PMGDeptDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelMarketingDate.Text = If(String.IsNullOrEmpty(reader("MarketingDeptDate").ToString()), "Pending", DateTime.Parse(reader("MarketingDeptDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelFinanceHeadDate.Text = If(String.IsNullOrEmpty(reader("FinanceHeadDate").ToString()), "Pending", DateTime.Parse(reader("FinanceHeadDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelFinanceDate.Text = If(String.IsNullOrEmpty(reader("FinanceDeptDate").ToString()), "Pending", DateTime.Parse(reader("FinanceDeptDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelAdminDate.Text = If(String.IsNullOrEmpty(reader("AdminGroupDate").ToString()), "Pending", DateTime.Parse(reader("AdminGroupDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelAdminHeadDate.Text = If(String.IsNullOrEmpty(reader("AdminHeadDate").ToString()), "Pending", DateTime.Parse(reader("AdminHeadDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelSysAdminDate.Text = If(String.IsNullOrEmpty(reader("SysAdminDate").ToString()), "Pending", DateTime.Parse(reader("SysAdminDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelSysAdminHeadDate.Text = If(String.IsNullOrEmpty(reader("SysAdminHeadDate").ToString()), "Pending", DateTime.Parse(reader("SysAdminHeadDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelHRGroupDate.Text = If(String.IsNullOrEmpty(reader("HRGroupDate").ToString()), "Pending", DateTime.Parse(reader("HRGroupDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelHRHeadDate.Text = If(String.IsNullOrEmpty(reader("HRHeadDate").ToString()), "Pending", DateTime.Parse(reader("HRHeadDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelHRInterviewDate.Text = If(String.IsNullOrEmpty(reader("ScheduleInterviewDate").ToString()), "Pending", DateTime.Parse(reader("ScheduleInterviewDate").ToString()).ToString("MMM-dd-yyyy"))
-            Dashboard.LabelFinalDate.Text = If(String.IsNullOrEmpty(reader("ExitInterviewDate").ToString()), "Pending", DateTime.Parse(reader("ExitInterviewDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelSDGSuperDate.Text = If(String.IsNullOrEmpty(reader("SDGSuperDate").ToString()), "Pending", DateTime.Parse(reader("SDGSuperDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelSDGDate.Text = If(String.IsNullOrEmpty(reader("SDGDeptDate").ToString()), "Pending", DateTime.Parse(reader("SDGDeptDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelITOPSDate.Text = If(String.IsNullOrEmpty(reader("ITOPSDeptDate").ToString()), "Pending", DateTime.Parse(reader("ITOPSDeptDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelPMGDate.Text = If(String.IsNullOrEmpty(reader("PMGDeptDate").ToString()), "Pending", DateTime.Parse(reader("PMGDeptDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelMarketingDate.Text = If(String.IsNullOrEmpty(reader("MarketingDeptDate").ToString()), "Pending", DateTime.Parse(reader("MarketingDeptDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelFinanceHeadDate.Text = If(String.IsNullOrEmpty(reader("FinanceHeadDate").ToString()), "Pending", DateTime.Parse(reader("FinanceHeadDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelFinanceDate.Text = If(String.IsNullOrEmpty(reader("FinanceDeptDate").ToString()), "Pending", DateTime.Parse(reader("FinanceDeptDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelAdminDate.Text = If(String.IsNullOrEmpty(reader("AdminGroupDate").ToString()), "Pending", DateTime.Parse(reader("AdminGroupDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelAdminHeadDate.Text = If(String.IsNullOrEmpty(reader("AdminHeadDate").ToString()), "Pending", DateTime.Parse(reader("AdminHeadDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelSysAdminDate.Text = If(String.IsNullOrEmpty(reader("SysAdminDate").ToString()), "Pending", DateTime.Parse(reader("SysAdminDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelSysAdminHeadDate.Text = If(String.IsNullOrEmpty(reader("SysAdminHeadDate").ToString()), "Pending", DateTime.Parse(reader("SysAdminHeadDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelHRGroupDate.Text = If(String.IsNullOrEmpty(reader("HRGroupDate").ToString()), "Pending", DateTime.Parse(reader("HRGroupDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelHRHeadDate.Text = If(String.IsNullOrEmpty(reader("HRHeadDate").ToString()), "Pending", DateTime.Parse(reader("HRHeadDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelHRInterviewDate.Text = If(String.IsNullOrEmpty(reader("ScheduleInterviewDate").ToString()), "Pending", DateTime.Parse(reader("ScheduleInterviewDate").ToString()).ToString("MMM-dd-yyyy"))
+        Dashboard.LabelFinalDate.Text = If(String.IsNullOrEmpty(reader("ExitInterviewDate").ToString()), "Pending", DateTime.Parse(reader("ExitInterviewDate").ToString()).ToString("MMM-dd-yyyy"))
+
 
         End While
 
@@ -167,10 +221,22 @@ Public Class LABELS
     End Sub
 
     Public Sub LabelCheckBox()
-        Dim sql As String = "SELECT `CashAdvance`, `FinanceDeptOthers`, `FinanceDeptOtherComment`, `CheckTeleco`, `CheckTools`, `CheckPhone`, `CheckTable`, `CheckOthers`, `CheckOthersComment`, `CheckLaptop`, `CheckEmail`, `CheckCom`, `CheckHMO`, `CheckInsurance`, `CheckCompanyID`, `CheckQuitClaim`, `CheckCOE`, `CheckITR`, `CheckFinalPay`, `ScheduleInterviewStatus`, `ExitInterviewStatus` FROM historyrequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+        Dim sql As String
+        Dim query = "SELECT `empID` FROM `historyrequest` WHERE `empID`='" & Dashboard.LabelEmpID.Text & "'"
+        Dim command As New MySqlCommand(query, dbs.getconn)
+        dbs.opencon()
+
+        Dim scalarResult As Object = command.ExecuteScalar()
+        If scalarResult IsNot Nothing Then
+
+            sql = "SELECT `CashAdvance`, `FinanceDeptOthers`, `FinanceDeptOtherComment`, `CheckTeleco`, `CheckTools`, `CheckPhone`, `CheckTable`, `CheckOthers`, `CheckOthersComment`, `CheckLaptop`, `CheckEmail`, `CheckCom`, `CheckHMO`, `CheckInsurance`, `CheckCompanyID`, `CheckQuitClaim`, `CheckCOE`, `CheckITR`, `CheckFinalPay`, `ScheduleInterviewStatus`, `ExitInterviewStatus` FROM historyrequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+
+        Else
+            sql = "SELECT `CashAdvance`, `FinanceDeptOthers`, `FinanceDeptOtherComment`, `CheckTeleco`, `CheckTools`, `CheckPhone`, `CheckTable`, `CheckOthers`, `CheckOthersComment`, `CheckLaptop`, `CheckEmail`, `CheckCom`, `CheckHMO`, `CheckInsurance`, `CheckCompanyID`, `CheckQuitClaim`, `CheckCOE`, `CheckITR`, `CheckFinalPay`, `ScheduleInterviewStatus`, `ExitInterviewStatus` FROM completerequest WHERE empID='" & Dashboard.LabelEmpID.Text & "'"
+
+        End If
 
         Dim cmd As New MySqlCommand(sql, dbs.getconn())
-        dbs.opencon()
         Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
         If reader.Read() Then
@@ -408,26 +474,5 @@ Public Class LABELS
         End If
     End Sub
 
-    Public Sub LabelInfoEmp()
-        Dim sql As String = "SELECT Name, empID, dept, position, clearPurpose, employeeStatus, LastDayEmploy FROM historyrequest WHERE empID='" & Login.TextBox1.Text & "'"
 
-        Dim cmd As New MySqlCommand(sql, dbs.getconn())
-        dbs.opencon()
-        Dim reader As MySqlDataReader = cmd.ExecuteReader()
-
-        While reader.Read()
-            Dashboard.LabelEmpName.Text = If(String.IsNullOrEmpty(reader("Name").ToString()), "Pending", reader("Name").ToString())
-            Dashboard.LabelEmpID.Text = If(String.IsNullOrEmpty(reader("empID").ToString()), "Pending", reader("empID").ToString())
-            Dashboard.LabelDept.Text = If(String.IsNullOrEmpty(reader("dept").ToString()), "Pending", reader("dept").ToString())
-            Dashboard.LabelPos.Text = If(String.IsNullOrEmpty(reader("position").ToString()), "Pending", reader("position").ToString())
-            Dashboard.LabelPurpose.Text = If(String.IsNullOrEmpty(reader("clearPurpose").ToString()), "Pending", reader("clearPurpose").ToString())
-            Dashboard.LabelStatus.Text = If(String.IsNullOrEmpty(reader("employeeStatus").ToString()), "Pending", reader("employeeStatus").ToString())
-            Dashboard.LabelLastDay.Text = If(String.IsNullOrEmpty(reader("LastDayEmploy").ToString()), "Pending", DateTime.Parse(reader("LastDayEmploy").ToString()).ToString("MMM-dd-yyyy"))
-
-
-        End While
-
-        reader.Close()
-        dbs.closecon()
-    End Sub
 End Class

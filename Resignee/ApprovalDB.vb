@@ -25,10 +25,10 @@ Public Class ApprovalDB
 
         dbs.opencon()
         If command.ExecuteNonQuery() = 1 Then
-
+            dbs.closecon()
             Return True
         Else
-
+            dbs.closecon()
             Return False
         End If
     End Function
@@ -45,10 +45,10 @@ Public Class ApprovalDB
 
         dbs.opencon()
         If command.ExecuteNonQuery() = 1 Then
-
+            dbs.closecon()
             Return True
         Else
-
+            dbs.closecon()
             Return False
         End If
     End Function
@@ -60,10 +60,10 @@ Public Class ApprovalDB
 
         dbs.opencon()
         If command.ExecuteNonQuery() = 1 Then
-
+            dbs.closecon()
             Return True
         Else
-
+            dbs.closecon()
             Return False
         End If
     End Function
