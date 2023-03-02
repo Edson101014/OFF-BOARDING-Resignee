@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Dashboard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Dashboard
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.LabelFinalDate = New System.Windows.Forms.Label()
@@ -145,6 +145,8 @@ Partial Class Dashboard
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.ButtonRefresh = New System.Windows.Forms.Button()
+        Me.ButtonLogOut = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -188,6 +190,7 @@ Partial Class Dashboard
         Me.LabelFinalName.Size = New System.Drawing.Size(79, 16)
         Me.LabelFinalName.TabIndex = 533
         Me.LabelFinalName.Text = "LabelName"
+        Me.LabelFinalName.Visible = False
         '
         'Label22
         '
@@ -265,6 +268,7 @@ Partial Class Dashboard
         Me.LabelHRInterviewName.Size = New System.Drawing.Size(79, 16)
         Me.LabelHRInterviewName.TabIndex = 526
         Me.LabelHRInterviewName.Text = "LabelName"
+        Me.LabelHRInterviewName.Visible = False
         '
         'Label213
         '
@@ -314,6 +318,7 @@ Partial Class Dashboard
         Me.LabelHRHeadName.Size = New System.Drawing.Size(79, 16)
         Me.LabelHRHeadName.TabIndex = 521
         Me.LabelHRHeadName.Text = "LabelName"
+        Me.LabelHRHeadName.Visible = False
         '
         'Label32
         '
@@ -468,6 +473,7 @@ Partial Class Dashboard
         Me.LabelHRGroupName.Size = New System.Drawing.Size(79, 16)
         Me.LabelHRGroupName.TabIndex = 476
         Me.LabelHRGroupName.Text = "LabelName"
+        Me.LabelHRGroupName.Visible = False
         '
         'Label222
         '
@@ -517,6 +523,7 @@ Partial Class Dashboard
         Me.LabelSysAdminHeadName.Size = New System.Drawing.Size(79, 16)
         Me.LabelSysAdminHeadName.TabIndex = 471
         Me.LabelSysAdminHeadName.Text = "LabelName"
+        Me.LabelSysAdminHeadName.Visible = False
         '
         'Label30
         '
@@ -566,6 +573,7 @@ Partial Class Dashboard
         Me.LabelSysAdminName.Size = New System.Drawing.Size(79, 16)
         Me.LabelSysAdminName.TabIndex = 461
         Me.LabelSysAdminName.Text = "LabelName"
+        Me.LabelSysAdminName.Visible = False
         '
         'Label23
         '
@@ -737,6 +745,7 @@ Partial Class Dashboard
         Me.LabelAdminHeadName.Size = New System.Drawing.Size(79, 16)
         Me.LabelAdminHeadName.TabIndex = 256
         Me.LabelAdminHeadName.Text = "LabelName"
+        Me.LabelAdminHeadName.Visible = False
         '
         'Label15
         '
@@ -786,6 +795,7 @@ Partial Class Dashboard
         Me.LabelAdminName.Size = New System.Drawing.Size(79, 16)
         Me.LabelAdminName.TabIndex = 251
         Me.LabelAdminName.Text = "LabelName"
+        Me.LabelAdminName.Visible = False
         '
         'Label14
         '
@@ -825,6 +835,7 @@ Partial Class Dashboard
         Me.LabelSDGName.Size = New System.Drawing.Size(79, 16)
         Me.LabelSDGName.TabIndex = 246
         Me.LabelSDGName.Text = "LabelName"
+        Me.LabelSDGName.Visible = False
         '
         'Label13
         '
@@ -1045,6 +1056,7 @@ Partial Class Dashboard
         Me.LabelFinanceHeadName.Size = New System.Drawing.Size(79, 16)
         Me.LabelFinanceHeadName.TabIndex = 234
         Me.LabelFinanceHeadName.Text = "LabelName"
+        Me.LabelFinanceHeadName.Visible = False
         '
         'Label12
         '
@@ -1213,6 +1225,7 @@ Partial Class Dashboard
         Me.LabelFinanceName.Size = New System.Drawing.Size(79, 16)
         Me.LabelFinanceName.TabIndex = 68
         Me.LabelFinanceName.Text = "LabelName"
+        Me.LabelFinanceName.Visible = False
         '
         'LabelSDGSuperName
         '
@@ -1223,6 +1236,7 @@ Partial Class Dashboard
         Me.LabelSDGSuperName.Size = New System.Drawing.Size(79, 16)
         Me.LabelSDGSuperName.TabIndex = 66
         Me.LabelSDGSuperName.Text = "LabelName"
+        Me.LabelSDGSuperName.Visible = False
         '
         'LabelPMGName
         '
@@ -1233,6 +1247,7 @@ Partial Class Dashboard
         Me.LabelPMGName.Size = New System.Drawing.Size(79, 16)
         Me.LabelPMGName.TabIndex = 65
         Me.LabelPMGName.Text = "LabelName"
+        Me.LabelPMGName.Visible = False
         '
         'LabelMarketingName
         '
@@ -1243,6 +1258,7 @@ Partial Class Dashboard
         Me.LabelMarketingName.Size = New System.Drawing.Size(79, 16)
         Me.LabelMarketingName.TabIndex = 63
         Me.LabelMarketingName.Text = "LabelName"
+        Me.LabelMarketingName.Visible = False
         '
         'LabelITOPSName
         '
@@ -1253,6 +1269,7 @@ Partial Class Dashboard
         Me.LabelITOPSName.Size = New System.Drawing.Size(79, 16)
         Me.LabelITOPSName.TabIndex = 62
         Me.LabelITOPSName.Text = "LabelName"
+        Me.LabelITOPSName.Visible = False
         '
         'LabelBDGName
         '
@@ -1263,6 +1280,7 @@ Partial Class Dashboard
         Me.LabelBDGName.Size = New System.Drawing.Size(79, 16)
         Me.LabelBDGName.TabIndex = 60
         Me.LabelBDGName.Text = "LabelName"
+        Me.LabelBDGName.Visible = False
         '
         'LabelFinanceStatus
         '
@@ -1544,11 +1562,36 @@ Partial Class Dashboard
         Me.Label3.TabIndex = 157
         Me.Label3.Text = "Employee Name:"
         '
+        'ButtonRefresh
+        '
+        Me.ButtonRefresh.BackColor = System.Drawing.Color.Salmon
+        Me.ButtonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonRefresh.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonRefresh.Location = New System.Drawing.Point(728, 71)
+        Me.ButtonRefresh.Name = "ButtonRefresh"
+        Me.ButtonRefresh.Size = New System.Drawing.Size(84, 36)
+        Me.ButtonRefresh.TabIndex = 176
+        Me.ButtonRefresh.Text = "REFRESH"
+        Me.ButtonRefresh.UseVisualStyleBackColor = False
+        '
+        'ButtonLogOut
+        '
+        Me.ButtonLogOut.BackColor = System.Drawing.Color.SpringGreen
+        Me.ButtonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonLogOut.Location = New System.Drawing.Point(829, 72)
+        Me.ButtonLogOut.Name = "ButtonLogOut"
+        Me.ButtonLogOut.Size = New System.Drawing.Size(90, 35)
+        Me.ButtonLogOut.TabIndex = 177
+        Me.ButtonLogOut.Text = "LOGOUT"
+        Me.ButtonLogOut.UseVisualStyleBackColor = False
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(931, 721)
+        Me.Controls.Add(Me.ButtonLogOut)
+        Me.Controls.Add(Me.ButtonRefresh)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.LabelStatus)
         Me.Controls.Add(Me.LabelPos)
@@ -1705,4 +1748,6 @@ Partial Class Dashboard
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents ButtonRefresh As Button
+    Friend WithEvents ButtonLogOut As Button
 End Class

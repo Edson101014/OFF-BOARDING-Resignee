@@ -2,6 +2,7 @@
 Public Class Login
     Private count = 0
     Dim app As New ApprovalDB
+    Dim classname As New LABELS
     Private Sub Login_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         StartUp.Show()
     End Sub
@@ -18,6 +19,7 @@ Public Class Login
 
         If table.Rows.Count > 0 Then
             Me.Hide()
+            classname.LabelInfoEmp()
             Dashboard.Show()
             TextBox1.Clear()
             TextBox2.Clear()

@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Module Module1
+Public Class LABELS
     Dim dbs As New db
     Dim reader As MySqlDataReader
     Dim cmd As New MySqlCommand
@@ -197,28 +197,28 @@ Module Module1
                 Dashboard.CheckBoxTelco.Checked = False
             End If
 
-            Dim checkToolsValue As String = reader("CheckTools").ToString
+            Dim checkToolsValue As String = reader("CheckTools").ToString()
             If String.Equals(checkToolsValue, "Checked", StringComparison.OrdinalIgnoreCase) Then
                 Dashboard.CheckBoxTools.Checked = True
             ElseIf String.Equals(checkToolsValue, "Unchecked", StringComparison.OrdinalIgnoreCase) Then
                 Dashboard.CheckBoxTools.Checked = False
             End If
 
-            Dim checkPhoneValue As String = reader("CheckPhone").ToString
+            Dim checkPhoneValue As String = reader("CheckPhone").ToString()
             If String.Equals(checkPhoneValue, "Checked", StringComparison.OrdinalIgnoreCase) Then
                 Dashboard.CheckBoxPhone.Checked = True
             ElseIf String.Equals(checkPhoneValue, "Unchecked", StringComparison.OrdinalIgnoreCase) Then
                 Dashboard.CheckBoxPhone.Checked = False
             End If
 
-            Dim checkTableValue As String = reader("CheckTable").ToString
+            Dim checkTableValue As String = reader("CheckTable").ToString()
             If String.Equals(checkTableValue, "Checked", StringComparison.OrdinalIgnoreCase) Then
                 Dashboard.CheckBoxTable.Checked = True
             ElseIf String.Equals(checkTableValue, "Unchecked", StringComparison.OrdinalIgnoreCase) Then
                 Dashboard.CheckBoxTable.Checked = False
             End If
 
-            Dim checkOthersValue As String = reader("CheckOthers").ToString
+            Dim checkOthersValue As String = reader("CheckOthers").ToString()
             If String.Equals(checkOthersValue, "Checked", StringComparison.OrdinalIgnoreCase) Then
                 Dashboard.CheckBoxOthers.Checked = True
             ElseIf String.Equals(checkOthersValue, "Unchecked", StringComparison.OrdinalIgnoreCase) Then
@@ -298,6 +298,7 @@ Module Module1
             ElseIf String.Equals(checkFinalPayValue, "Unchecked", StringComparison.OrdinalIgnoreCase) Then
                 Dashboard.CheckBoxFinalPay.Checked = False
             End If
+
 
             Dim checkScheduleValue As String = reader("ScheduleInterviewStatus").ToString()
             If String.Equals(checkScheduleValue, "Scheduled", StringComparison.OrdinalIgnoreCase) Then
@@ -406,4 +407,27 @@ Module Module1
             Dashboard.CheckBoxFinal.Checked = False
         End If
     End Sub
-End Module
+
+    Public Sub LabelInfoEmp()
+        Dim sql As String = "SELECT Name, empID, dept, position, clearPurpose, employeeStatus, LastDayEmploy FROM historyrequest WHERE empID='" & Login.TextBox1.Text & "'"
+
+        Dim cmd As New MySqlCommand(sql, dbs.getconn())
+        dbs.opencon()
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+        While reader.Read()
+            Dashboard.LabelEmpName.Text = If(String.IsNullOrEmpty(reader("Name").ToString()), "Pending", reader("Name").ToString())
+            Dashboard.LabelEmpID.Text = If(String.IsNullOrEmpty(reader("empID").ToString()), "Pending", reader("empID").ToString())
+            Dashboard.LabelDept.Text = If(String.IsNullOrEmpty(reader("dept").ToString()), "Pending", reader("dept").ToString())
+            Dashboard.LabelPos.Text = If(String.IsNullOrEmpty(reader("position").ToString()), "Pending", reader("position").ToString())
+            Dashboard.LabelPurpose.Text = If(String.IsNullOrEmpty(reader("clearPurpose").ToString()), "Pending", reader("clearPurpose").ToString())
+            Dashboard.LabelStatus.Text = If(String.IsNullOrEmpty(reader("employeeStatus").ToString()), "Pending", reader("employeeStatus").ToString())
+            Dashboard.LabelLastDay.Text = If(String.IsNullOrEmpty(reader("LastDayEmploy").ToString()), "Pending", DateTime.Parse(reader("LastDayEmploy").ToString()).ToString("MMM-dd-yyyy"))
+
+
+        End While
+
+        reader.Close()
+        dbs.closecon()
+    End Sub
+End Class
