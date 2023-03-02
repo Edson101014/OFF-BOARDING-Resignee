@@ -122,7 +122,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="db.vb" />
-    <Compile Include="Labelss.vb" />
+    <Compile Include="LABELS.vb" />
     <Compile Include="Loading.Designer.vb">
       <DependentUpon>Loading.vb</DependentUpon>
     </Compile>
