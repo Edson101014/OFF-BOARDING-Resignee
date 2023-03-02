@@ -53,6 +53,9 @@ Partial Class Loading
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "LOADING..."
         '
+        'Timer1
+        '
+        '
         'Label2
         '
         Me.Label2.AutoSize = True

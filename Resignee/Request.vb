@@ -2,8 +2,13 @@
 Imports System.IO
 Imports System.Text.RegularExpressions
 Imports System.Reflection
+Imports MySql.Data.MySqlClient
 
 Public Class Request
+    Dim dbs As New db
+    Dim reader As MySqlDataReader
+    Dim cmd As New MySqlCommand
+    Dim x As Integer
     Private Sub Request_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim today As Date = Date.Today.Date
         LabelLastDay.Text = Date.Today.AddDays(30)
@@ -110,19 +115,19 @@ Public Class Request
             insert = "INSERT INTO `hrinterview`(`Name`, `empID`, `dept`, `position`, `clearPurpose`, `employeeStatus`, `LastDayEmploy`, `hrStatus`) VALUES (@name, @id, @dept, @pos, @purpose, @status, @lastday, @stats)"
 
             sentmail()
-                apdb.insertApproval(empName, empID, Dept, empPos, clear, empStatus, lastDay, status, insert)
-                apdb.insertHistory(empName, empID, Dept, empPos, clear, empStatus, lastDay)
-                apdb.insertUser(empID, pass)
+            apdb.insertApproval(empName, empID, Dept, empPos, clear, empStatus, lastDay, status, insert)
+            apdb.insertHistory(empName, empID, Dept, empPos, clear, empStatus, lastDay)
+            apdb.insertUser(empID, pass)
             Loading.Hide()
             MsgBox("Request has sent!, You can now login to monitor your request", MsgBoxStyle.Information, "Request")
             Me.Close()
-                TextBoxName.Clear()
-                TextBoxEmpID.Clear()
-                TextBoxPos.Clear()
-                ComboBox1.SelectedIndex = -1
+            TextBoxName.Clear()
+            TextBoxEmpID.Clear()
+            TextBoxPos.Clear()
+            ComboBox1.SelectedIndex = -1
 
-                TextBoxEmpID.Clear()
-                TextBoxPassword.Clear()
+            TextBoxEmpID.Clear()
+            TextBoxPassword.Clear()
 
 
         Else
@@ -156,24 +161,35 @@ Public Class Request
                 Smtp_Server.EnableSsl = True
                 Smtp_Server.Host = "smtp.gmail.com"
 
+                Dim query As String = "SELECT email FROM login WHERE department = 'HR' AND (title = 'Interview' OR title IS NULL) ORDER BY department ASC"
 
-                Mailtext = Mailtext.Replace("@empname", TextBoxName.Text)
-                Mailtext = Mailtext.Replace("@empID", TextBoxEmpID.Text)
-                Mailtext = Mailtext.Replace("@empPos", TextBoxPos.Text)
-                Mailtext = Mailtext.Replace("@empStatus", CheckedListBoxStatus.SelectedItem)
-                Mailtext = Mailtext.Replace("@clearPurpose", CheckedListBoxPurpose.SelectedItem)
-                Mailtext = Mailtext.Replace("@lastday", LabelLastDay.Text)
-                Mailtext = Mailtext.Replace("@dept", ComboBox2.SelectedItem)
+                cmd.Connection = dbs.getconn
+                dbs.opencon()
+                cmd.CommandText = query
+                reader = cmd.ExecuteReader
+                While reader.Read()
+                    Dim email As String = reader.GetString("email")
 
-                e_mail = New MailMessage
-                e_mail.From = New MailAddress("no-reply@gmail.com")
-                e_mail.To.Add("edsonpaul.olimberio10@gmail.com")
+                    Mailtext = Mailtext.Replace("@empname", TextBoxName.Text)
+                    Mailtext = Mailtext.Replace("@empID", TextBoxEmpID.Text)
+                    Mailtext = Mailtext.Replace("@empPos", TextBoxPos.Text)
+                    Mailtext = Mailtext.Replace("@empStatus", CheckedListBoxStatus.SelectedItem)
+                    Mailtext = Mailtext.Replace("@clearPurpose", CheckedListBoxPurpose.SelectedItem)
+                    Mailtext = Mailtext.Replace("@lastday", LabelLastDay.Text)
+                    Mailtext = Mailtext.Replace("@dept", ComboBox2.SelectedItem)
 
-                e_mail.Subject = "Request Approval Notification"
-                e_mail.IsBodyHtml = True
-                e_mail.Body = Mailtext
+                    e_mail = New MailMessage
+                    e_mail.From = New MailAddress("no-reply@gmail.com")
+                    e_mail.To.Add(email)
 
-                Await Smtp_Server.SendMailAsync(e_mail)
+                    e_mail.Subject = "Request Approval Notification"
+                    e_mail.IsBodyHtml = True
+                    e_mail.Body = Mailtext
+
+                    Await Smtp_Server.SendMailAsync(e_mail)
+
+                End While
+
 
             End If
 

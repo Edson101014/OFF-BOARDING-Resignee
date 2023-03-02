@@ -202,11 +202,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\WTI-Logo-Big %282%29-removebg-preview.ico" />
+    <EmbeddedResource Include="Resources\WTI-Logo-Big %282%29-removebg-preview.ico" />
     <None Include="Resignee_TemporaryKey.pfx" />
-    <Content Include="Resources\WTI-Logo-Big %282%29.png">
+    <EmbeddedResource Include="Resources\WTI-Logo-Big %282%29.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -216,14 +216,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\loading.gif">
+    <EmbeddedResource Include="Resources\loading.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\index.html">
+    <EmbeddedResource Include="Resources\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
