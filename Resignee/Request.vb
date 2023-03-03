@@ -6,8 +6,8 @@ Imports MySql.Data.MySqlClient
 
 Public Class Request
     Dim dbs As New db
-    Dim reader As MySqlDataReader
-    Dim cmd As New MySqlCommand
+
+
     Dim x As Integer
     Private Sub Request_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim today As Date = Date.Today.Date
@@ -16,7 +16,7 @@ Public Class Request
         ComboBox2.SelectedItem = "BDG"
     End Sub
     Private Sub Request_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        dbs.closecon()
+        dbs.returnConnection(dbs.getConn())
         StartUp.Show()
     End Sub
 
@@ -164,40 +164,41 @@ Public Class Request
 
                 Dim query As String = "SELECT email FROM login WHERE department = 'HR' AND (title = 'Interview' OR title IS NULL) ORDER BY department ASC"
 
-                cmd.Connection = dbs.getconn
-                dbs.opencon()
-                cmd.CommandText = query
-                reader = cmd.ExecuteReader
-                While reader.Read()
-                    Dim email As String = reader.GetString("email")
+                Using conn As MySqlConnection = dbs.getConn()
+                    Dim cmd As New MySqlCommand(query, conn)
+                    conn.Open()
+                    Dim reader As MySqlDataReader = cmd.ExecuteReader()
+                    While reader.Read()
+                        Dim email As String = reader.GetString("email")
 
-                    Mailtext = Mailtext.Replace("@empname", TextBoxName.Text)
-                    Mailtext = Mailtext.Replace("@empID", TextBoxEmpID.Text)
-                    Mailtext = Mailtext.Replace("@empPos", TextBoxPos.Text)
-                    Mailtext = Mailtext.Replace("@empStatus", CheckedListBoxStatus.SelectedItem)
-                    Mailtext = Mailtext.Replace("@clearPurpose", CheckedListBoxPurpose.SelectedItem)
-                    Mailtext = Mailtext.Replace("@lastday", LabelLastDay.Text)
-                    Mailtext = Mailtext.Replace("@dept", ComboBox2.SelectedItem)
+                        Mailtext = Mailtext.Replace("@empname", TextBoxName.Text)
+                        Mailtext = Mailtext.Replace("@empID", TextBoxEmpID.Text)
+                        Mailtext = Mailtext.Replace("@empPos", TextBoxPos.Text)
+                        Mailtext = Mailtext.Replace("@empStatus", CheckedListBoxStatus.SelectedItem)
+                        Mailtext = Mailtext.Replace("@clearPurpose", CheckedListBoxPurpose.SelectedItem)
+                        Mailtext = Mailtext.Replace("@lastday", LabelLastDay.Text)
+                        Mailtext = Mailtext.Replace("@dept", ComboBox2.SelectedItem)
 
-                    e_mail = New MailMessage
-                    e_mail.From = New MailAddress("no-reply@gmail.com")
-                    e_mail.To.Add(email)
+                        e_mail = New MailMessage
+                        e_mail.From = New MailAddress("no-reply@gmail.com")
+                        e_mail.To.Add(email)
 
-                    e_mail.Subject = "Request Approval Notification"
-                    e_mail.IsBodyHtml = True
-                    e_mail.Body = Mailtext
+                        e_mail.Subject = "Request Approval Notification"
+                        e_mail.IsBodyHtml = True
+                        e_mail.Body = Mailtext
 
-                    Await Smtp_Server.SendMailAsync(e_mail)
+                        Await Smtp_Server.SendMailAsync(e_mail)
 
-                End While
+                    End While
+                    reader.Close()
 
-
+                End Using
             End If
 
-        Catch error_t As Exception
-            MsgBox(error_t.ToString)
-
-
+        Catch ex As Exception
+            MessageBox.Show("Error checking for internet connection: " & ex.Message)
+        Finally
+            dbs.returnConnection(dbs.getConn())
         End Try
 
     End Sub

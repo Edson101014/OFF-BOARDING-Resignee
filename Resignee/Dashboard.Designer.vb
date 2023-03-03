@@ -95,6 +95,21 @@ Partial Class Dashboard
         Me.LabelEmpID = New System.Windows.Forms.Label()
         Me.LabelSDGComment = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.LabelFinanceHeadName = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.LabelFinanceComment = New System.Windows.Forms.Label()
@@ -147,21 +162,7 @@ Partial Class Dashboard
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ButtonRefresh = New System.Windows.Forms.Button()
         Me.ButtonLogOut = New System.Windows.Forms.Button()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -1060,6 +1061,141 @@ Partial Class Dashboard
         Me.Panel1.Size = New System.Drawing.Size(932, 457)
         Me.Panel1.TabIndex = 175
         '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(10, 1604)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(877, 13)
+        Me.Label41.TabIndex = 551
+        Me.Label41.Text = resources.GetString("Label41.Text")
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(10, 1528)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(877, 13)
+        Me.Label40.TabIndex = 550
+        Me.Label40.Text = resources.GetString("Label40.Text")
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(10, 1258)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(877, 13)
+        Me.Label38.TabIndex = 549
+        Me.Label38.Text = resources.GetString("Label38.Text")
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(10, 1176)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(877, 13)
+        Me.Label37.TabIndex = 548
+        Me.Label37.Text = resources.GetString("Label37.Text")
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Location = New System.Drawing.Point(10, 1048)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(877, 13)
+        Me.Label36.TabIndex = 547
+        Me.Label36.Text = resources.GetString("Label36.Text")
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(10, 963)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(877, 13)
+        Me.Label35.TabIndex = 546
+        Me.Label35.Text = resources.GetString("Label35.Text")
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(10, 754)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(877, 13)
+        Me.Label34.TabIndex = 545
+        Me.Label34.Text = resources.GetString("Label34.Text")
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(10, 1439)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(877, 13)
+        Me.Label33.TabIndex = 544
+        Me.Label33.Text = resources.GetString("Label33.Text")
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(10, 669)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(877, 13)
+        Me.Label29.TabIndex = 543
+        Me.Label29.Text = resources.GetString("Label29.Text")
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(10, 491)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(877, 13)
+        Me.Label28.TabIndex = 542
+        Me.Label28.Text = resources.GetString("Label28.Text")
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(10, 410)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(877, 13)
+        Me.Label26.TabIndex = 541
+        Me.Label26.Text = resources.GetString("Label26.Text")
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(10, 327)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(877, 13)
+        Me.Label25.TabIndex = 540
+        Me.Label25.Text = resources.GetString("Label25.Text")
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(10, 242)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(877, 13)
+        Me.Label21.TabIndex = 539
+        Me.Label21.Text = resources.GetString("Label21.Text")
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(10, 157)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(877, 13)
+        Me.Label20.TabIndex = 538
+        Me.Label20.Text = resources.GetString("Label20.Text")
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(10, 73)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(877, 13)
+        Me.Label17.TabIndex = 537
+        Me.Label17.Text = resources.GetString("Label17.Text")
+        '
         'LabelFinanceHeadName
         '
         Me.LabelFinanceHeadName.AutoSize = True
@@ -1584,140 +1720,8 @@ Partial Class Dashboard
         Me.ButtonLogOut.Text = "LOGOUT"
         Me.ButtonLogOut.UseVisualStyleBackColor = False
         '
-        'Label17
+        'BackgroundWorker1
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(10, 73)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(877, 13)
-        Me.Label17.TabIndex = 537
-        Me.Label17.Text = resources.GetString("Label17.Text")
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(10, 157)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(877, 13)
-        Me.Label20.TabIndex = 538
-        Me.Label20.Text = resources.GetString("Label20.Text")
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(10, 242)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(877, 13)
-        Me.Label21.TabIndex = 539
-        Me.Label21.Text = resources.GetString("Label21.Text")
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(10, 327)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(877, 13)
-        Me.Label25.TabIndex = 540
-        Me.Label25.Text = resources.GetString("Label25.Text")
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(10, 410)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(877, 13)
-        Me.Label26.TabIndex = 541
-        Me.Label26.Text = resources.GetString("Label26.Text")
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(10, 491)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(877, 13)
-        Me.Label28.TabIndex = 542
-        Me.Label28.Text = resources.GetString("Label28.Text")
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(10, 669)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(877, 13)
-        Me.Label29.TabIndex = 543
-        Me.Label29.Text = resources.GetString("Label29.Text")
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(10, 1439)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(877, 13)
-        Me.Label33.TabIndex = 544
-        Me.Label33.Text = resources.GetString("Label33.Text")
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Location = New System.Drawing.Point(10, 754)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(877, 13)
-        Me.Label34.TabIndex = 545
-        Me.Label34.Text = resources.GetString("Label34.Text")
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Location = New System.Drawing.Point(10, 963)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(877, 13)
-        Me.Label35.TabIndex = 546
-        Me.Label35.Text = resources.GetString("Label35.Text")
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(10, 1048)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(877, 13)
-        Me.Label36.TabIndex = 547
-        Me.Label36.Text = resources.GetString("Label36.Text")
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(10, 1176)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(877, 13)
-        Me.Label37.TabIndex = 548
-        Me.Label37.Text = resources.GetString("Label37.Text")
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(10, 1258)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(877, 13)
-        Me.Label38.TabIndex = 549
-        Me.Label38.Text = resources.GetString("Label38.Text")
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(10, 1528)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(877, 13)
-        Me.Label40.TabIndex = 550
-        Me.Label40.Text = resources.GetString("Label40.Text")
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(10, 1604)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(877, 13)
-        Me.Label41.TabIndex = 551
-        Me.Label41.Text = resources.GetString("Label41.Text")
         '
         'Dashboard
         '
@@ -1899,4 +1903,5 @@ Partial Class Dashboard
     Friend WithEvents Label21 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Label17 As Label
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class

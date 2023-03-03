@@ -8,20 +8,28 @@ Public Class Dashboard
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        BackgroundWorker1.RunWorkerAsync()
         classname.LabelHRName()
         classname.LabelHRStatus()
         classname.LabelHRComment()
         classname.LabelHRDate()
         classname.LabelCheckBox()
+        Loading.ShowDialog()
+
 
     End Sub
 
     Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles ButtonRefresh.Click
+
+        BackgroundWorker1.RunWorkerAsync()
         classname.LabelHRName()
         classname.LabelHRStatus()
         classname.LabelHRComment()
         classname.LabelHRDate()
         classname.LabelCheckBox()
+        Loading.ShowDialog()
+
+
     End Sub
 
     Private Sub ButtonLogOut_Click(sender As Object, e As EventArgs) Handles ButtonLogOut.Click
@@ -30,7 +38,7 @@ Public Class Dashboard
 
 
     Private Sub Dashboard_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        dbs.closecon()
+        dbs.returnConnection(dbs.getConn())
         Login.Show()
 
     End Sub
@@ -372,5 +380,15 @@ Public Class Dashboard
         End If
     End Sub
 
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
+        classname.LabelHRName()
+        classname.LabelHRStatus()
+        classname.LabelHRComment()
+        classname.LabelHRDate()
+        classname.LabelCheckBox()
+    End Sub
 
+    Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
+        Loading.Close()
+    End Sub
 End Class
